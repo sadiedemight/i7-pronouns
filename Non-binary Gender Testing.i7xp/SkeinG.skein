@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-260">
+  <generator>Windows Inform 10.1.2</generator>
+  <item nodeId="node-260">
+    <command xml:space="preserve">Intro</command>
+    <result xml:space="preserve">Intro&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230501 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Warf&#x000A;You can see The Pequod (on which is Ahab) here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Intro&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230501 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Warf&#x000A;You can see The Pequod (on which is Ahab) here.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-261"/>
+    </children>
+  </item>
+  <item nodeId="node-261">
+    <command xml:space="preserve">pronouns of ahab</command>
+    <result xml:space="preserve">Considering Ahab, as for him, he has as his pronouns he-him. He is able to use such pronouns as his for himself. Ahab's pronouns are also for others to use on him.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Considering Ahab, as for him, he has as his pronouns he-him. He is able to use such pronouns as his for himself. Ahab's pronouns are also for others to use on him.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-262"/>
+    </children>
+  </item>
+  <item nodeId="node-262">
+    <command xml:space="preserve">pronouns of pequod</command>
+    <result xml:space="preserve">Considering The Pequod, as for her, she has as her pronouns she-her. She is able to use such pronouns as hers for herself. The Pequod's pronouns are also for others to use on her.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Considering The Pequod, as for her, she has as her pronouns she-her. She is able to use such pronouns as hers for herself. The Pequod's pronouns are also for others to use on her.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-308"/>
+    </children>
+  </item>
+  <item nodeId="node-308">
+    <command xml:space="preserve">x it</command>
+    <result xml:space="preserve">On The Pequod is Ahab.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">On The Pequod is Ahab.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-309"/>
+    </children>
+  </item>
+  <item nodeId="node-309">
+    <command xml:space="preserve">x her</command>
+    <result xml:space="preserve">(The Pequod)&#x000A;On The Pequod is Ahab.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">(The Pequod)&#x000A;On The Pequod is Ahab.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-310"/>
+    </children>
+  </item>
+  <item nodeId="node-310">
+    <command xml:space="preserve">x him</command>
+    <result xml:space="preserve">You see nothing special about Ahab.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">You see nothing special about Ahab.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+  </item>
+</Skein>

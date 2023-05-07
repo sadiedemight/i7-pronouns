@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-279">
+  <generator>Windows Inform 10.1.2</generator>
+  <item nodeId="node-279">
+    <command xml:space="preserve">Dependency</command>
+    <result xml:space="preserve">Dependency&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230501 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see the Spectacles of Truth and Mary here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Dependency&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230501 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see the Spectacles of Truth and Mary here.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-280"/>
+    </children>
+  </item>
+  <item nodeId="node-280">
+    <command xml:space="preserve">x mary</command>
+    <result xml:space="preserve">Mary smiles pleasantly.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Mary smiles pleasantly.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-281"/>
+    </children>
+  </item>
+  <item nodeId="node-281">
+    <command xml:space="preserve">touch her</command>
+    <result xml:space="preserve">Mary glares at you and shakes her head.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Mary glares at you and shakes her head.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-282"/>
+    </children>
+  </item>
+  <item nodeId="node-282">
+    <command xml:space="preserve">wear spectacles</command>
+    <result xml:space="preserve">(first taking the Spectacles of Truth)&#x000A;You put on the Spectacles of Truth.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">(first taking the Spectacles of Truth)&#x000A;You put on the Spectacles of Truth.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-283"/>
+    </children>
+  </item>
+  <item nodeId="node-283">
+    <command xml:space="preserve">x mary</command>
+    <result xml:space="preserve">Mary smiles pleasantly. But you can see dimly that she's just a humainoid marionette controlled by the demon Moloch.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Mary smiles pleasantly. But you can see dimly that she's just a humainoid marionette controlled by the demon Moloch.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-284"/>
+    </children>
+  </item>
+  <item nodeId="node-284">
+    <command xml:space="preserve">touch her</command>
+    <result xml:space="preserve">The demon glares at you and shakes its head.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The demon glares at you and shakes its head.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+  </item>
+</Skein>

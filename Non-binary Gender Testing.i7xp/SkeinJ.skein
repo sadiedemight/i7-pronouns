@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skein rootNode="node-285">
+  <generator>Windows Inform 10.1.2</generator>
+  <item nodeId="node-285">
+    <command xml:space="preserve">Mutability</command>
+    <result xml:space="preserve">Mutability&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230501 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Chris here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Mutability&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230501 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Chris here.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-286"/>
+    </children>
+  </item>
+  <item nodeId="node-286">
+    <command xml:space="preserve">pronouns of chris</command>
+    <result xml:space="preserve">Considering Chris, as for them, they have as their pronouns they-them. They are able to use such pronouns as theirs for themself. Chris's pronouns are also for others to use on them.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Considering Chris, as for them, they have as their pronouns they-them. They are able to use such pronouns as theirs for themself. Chris's pronouns are also for others to use on them.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-287"/>
+    </children>
+  </item>
+  <item nodeId="node-287">
+    <command xml:space="preserve">set pronouns of chris to she-her</command>
+    <result xml:space="preserve">The pronouns of Chris are now she-her.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The pronouns of Chris are now she-her.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-288"/>
+    </children>
+  </item>
+  <item nodeId="node-288">
+    <command xml:space="preserve">pronouns chris</command>
+    <result xml:space="preserve">Considering Chris, as for her, she has as her pronouns she-her. She is able to use such pronouns as hers for herself. Chris's pronouns are also for others to use on her.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Considering Chris, as for her, she has as her pronouns she-her. She is able to use such pronouns as hers for herself. Chris's pronouns are also for others to use on her.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-289"/>
+    </children>
+  </item>
+  <item nodeId="node-289">
+    <command xml:space="preserve">set pronouns of chris to implicit</command>
+    <result xml:space="preserve">The pronouns of Chris are now implicit, behaving as he-him.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The pronouns of Chris are now implicit, behaving as he-him.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-290"/>
+    </children>
+  </item>
+  <item nodeId="node-290">
+    <command xml:space="preserve">pronouns chris</command>
+    <result xml:space="preserve">Considering Chris, as for him, he has as his pronouns he-him. He is able to use such pronouns as his for himself. Chris's pronouns are also for others to use on him.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Considering Chris, as for him, he has as his pronouns he-him. He is able to use such pronouns as his for himself. Chris's pronouns are also for others to use on him.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+  </item>
+</Skein>
