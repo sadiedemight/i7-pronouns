@@ -116,13 +116,15 @@ Example: * Intro
 Example: * They-them
 
 	*: "They-them"
-	
+
 	Include Non-binary Gender by Sadie de Might.
-	Mary is a woman. Chris is a person. Pertinent pronouns for Chris: they-them appertains.
-	The Lab is a room. Mary and Chris are in the Lab.
-	To smile is a verb. Instead of examining someone: say "[The noun] [smile] at you. [They] [have] as [their] pronouns [first pertinent pronouns of the noun].".
+	Mary is a woman.
+	There is proper-named plural-named woman called The Fates.
+	Chris is a person. Pertinent pronouns for Chris: they-them appertains.
+	The Lab is a room. Mary, the Fates, and Chris are in the Lab.
+	To smile is a verb. Instead of examining someone: say "[The noun] [smile] at you. [They] [have] as [their] pronouns [pronouns of the noun].".
 	
-	Test me with "x mary / x chris".
+	Test me with "x mary / x fates / x chris".
 
 Example: * Dependency
 
@@ -142,7 +144,7 @@ Example: * Mutablitiy
 	*: "Mutability"
 
 	Include Non-binary Gender by Sadie de Might.
-	The Lab is a room. Chris is a person in the Lab. Chris has a pronoun lexeme called pronouns. The pronouns are they-them.
+	The Lab is a room. Chris is a person in the Lab. Chris has a pronoun lexeme called explicit pronouns. The explicit pronouns are they-them.
 
 	Test me with "pronouns of chris / set pronouns of chris to she-her / pronouns chris / set pronouns of chris to implicit / pronouns chris".
 

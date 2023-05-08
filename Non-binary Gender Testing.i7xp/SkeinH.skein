@@ -1,25 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-2">
+<Skein rootNode="node-76">
   <generator>Windows Inform 10.1.2</generator>
-  <item nodeId="node-2">
+  <item nodeId="node-76">
     <command xml:space="preserve">They-them</command>
-    <result xml:space="preserve">They-them&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230501 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Mary and Chris here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">They-them&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230501 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Mary and Chris here.&#x000A;&#x000A;&gt;</commentary>
+    <result xml:space="preserve">They-them&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230507 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Mary, The Fates and Chris here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">They-them&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230507 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Mary, The Fates and Chris here.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-3"/>
+      <child nodeId="node-77"/>
     </children>
   </item>
-  <item nodeId="node-3">
+  <item nodeId="node-77">
     <command xml:space="preserve">x mary</command>
     <result xml:space="preserve">Mary smiles at you. She has as her pronouns she-her.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">Mary smiles at you. She has as her pronouns she-her.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-4"/>
+      <child nodeId="node-80"/>
     </children>
   </item>
-  <item nodeId="node-4">
+  <item nodeId="node-80">
+    <command xml:space="preserve">x fates</command>
+    <result xml:space="preserve">The Fates smile at you. They have as their pronouns plural pronouns.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The Fates smile at you. They have as their pronouns plural pronouns.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-81"/>
+    </children>
+  </item>
+  <item nodeId="node-81">
     <command xml:space="preserve">x chris</command>
     <result xml:space="preserve">Chris smiles at you. They have as their pronouns they-them.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">Chris smiles at you. They have as their pronouns they-them.&#x000A;&#x000A;&gt;</commentary>

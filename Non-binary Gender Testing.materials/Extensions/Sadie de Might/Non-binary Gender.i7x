@@ -627,31 +627,36 @@ Part - Pertinence
 
 Chapter - Object pronouns
 
-Section - Implied pronouns
-
-To decide which pronoun lexeme is the implied pronouns of (O - an object):
-	if O is nothing, decide on the neuter pronouns;
-	if O is plural-named, decide on the plural pronouns;
-	if O is neuter or O is not a person, decide on the neuter pronouns;
-	if O is female, decide on she-her;
-	decide on he-him.
-
 Section - Value as a pronoun lexeme
 
+[This let's use use a value as an explicit pronoun lexeme if and only if it is an appropriate type.]
 To decide which pronoun lexeme is (V - a value of kind K) as a pronoun lexeme: decide on the implicit pronouns.
 To decide which pronoun lexeme is (P - a personed pronoun lexeme) as a pronoun lexeme:
 	if P is third-person, decide on P as third-person;
 	decide on the implicit pronouns.
 To decide which pronoun lexeme is (P - a pronoun lexeme) as a pronoun lexeme: decide on P.
 
-Section - Primary pronouns
+Section - Implied pronouns
 
-To decide whether (O - an object) provide/provides a/the/-- pronouns property: (- (({O}) provides pronouns) -).
-To decide which pronoun lexeme is the/-- primary pronouns of (O - an object):
-	if O is not nothing and O provides the pronouns property:
-		let P be pronouns of O as a pronoun lexeme;
+Yourself has a pronoun lexeme called explicit pronouns.
+Yourself can be non-binary pronouned.
+The explicit pronouns property translates into I6 as "pronouns".
+The non-binary pronouned property translates into I6 as "pronoun_nonbinary".
+
+To decide whether (O - an object) provide/provides a/the/-- explicit pronouns property: (- (({O}) provides pronouns) -).
+To decide whether (O - an object) provide/provides a/the/-- non-binary pronouned property: (- (({O}) provides pronoun_nonbinary) -).
+
+To decide which pronoun lexeme is the implied pronouns of (O - an object):
+	if O is nothing, decide on the neuter pronouns;
+	if O provides the explicit pronouns property:
+		let P be explicit pronouns of O as a pronoun lexeme;
 		unless P is the implicit pronouns, decide on P;
-	decide on the implied pronouns of O.
+	if O is plural-named, decide on the plural pronouns;
+	if O is neuter or O is not a person, decide on the neuter pronouns;
+	if O provides the non-binary pronouned property:
+		if O is non-binary pronouned, decide on they-them;
+	if O is female, decide on she-her;
+	decide on he-him.
 
 Chapter - Rulebooks
 
@@ -701,8 +706,8 @@ The elaborated pertinent pronouns rules are a object based rulebook.
 Elaborated pertinent pronouns for an object (called O) (this is the try pertinent pronouns before elaborating rule):
 	abide by the pertinent pronouns rules for O.
 
-Elaborated pertinent pronouns for an object (called O) (this is the primary object pronouns appertain if needed rule):
-	unless some pronouns already appertain, the primary pronouns of O appertain.
+Elaborated pertinent pronouns for an object (called O) (this is the implied object pronouns appertain if needed rule):
+	unless some pronouns already appertain, the implied pronouns of O appertain.
 
 Elaborated pertinent pronouns for an object (called O) (this is the ambiguously plural object pronouns pertain by default rule):
 	unless O is ambiguously plural, make no decision;
@@ -735,7 +740,7 @@ Global pronoun_pertinence_info_active;
 	pronoun_pertinence_kind = kind;
 	pronoun_pertinence_info_active = 0;
 	FollowRulebook(rulebook, parameter, true);
-	(+ the primary object pronouns appertain if needed rule +)();
+	(+ the implied object pronouns appertain if needed rule +)();
 	pronoun_pertinence_info = pronoun_pertinence_info_active;
 	pronoun_pertinence_rule = old_rule;
 	pronoun_pertinence_kind = old_kind;
@@ -753,7 +758,7 @@ Section - Referents
 
 The pronouns pertinent to referents is an object based rulebook that varies. The pronouns pertinent to referents is usually the elaborated pertinent pronouns rules.
 
-To decide which pronoun lexeme is the/-- first pertinent pronouns of (O - an object): (- PronounOfObject({O}) -).
+To decide which pronoun lexeme is the/-- pronouns of (O - an object): (- PronounOfObject({O}) -).
 
 Include (-
 
@@ -785,10 +790,6 @@ Use plural player forces plural pronouns translates as (- Constant PLURAL_PLAYER
 Use neuter player forced binary pronouns translates as (- Constant NEUTER_PLAYER_FORCED_BINARY; -).
 Use player forces nominative those translates as (- Constant PLAYER_FORCES_NOMINATIVE_THOSE; -).
 
-The pronouns property translates into I6 as "pronouns".
-Yourself has a pronoun lexeme called pronouns.
-A thing has a pronoun lexeme called pronouns.  [The pronouns of a thing are usually the implicit pronouns.] [TODO: Could this apply to just people?]
-To decide which pronoun lexeme is the/-- third person pronouns of (O - an object): (- PronounOfObject({O}) -).
 To decide which personed pronoun lexeme is the prior pronouns needed, regarding player or with player viewpoint: (- PronounOfPN({phrase options}) -).
 To decide which personed pronoun lexeme is the prior pronouns needed with later verbs adapted, regarding player: (- PronounOfPNSettingVP({phrase options}) -).
 
@@ -901,20 +902,20 @@ To say The pronouns demo about (T - some text):
 To say The pronouns demo about (O - an object):
 	demonstrate pronouns about "[the O]" calling them "[regarding O][Possessive] pronouns".
 
-Requesting the pronouns of is an action out of world and applying to one object.
-Report requesting the pronouns of: say "[The pronouns demo about the noun].".
-Understand "pronouns of/-- [things]" as requesting the pronouns of.
-The specification of the requesting the pronouns of action is "Says a silly sentence to show off all the pronoun forms of a thing.".
+Requesting the personed pronouns of is an action out of world and applying to one object.
+Report requesting the personed pronouns of: say "[The pronouns demo about the noun].".
+Understand "pronouns of/-- [things]" as requesting the personed pronouns of.
+The specification of the requesting the personed pronouns of action is "Says a silly sentence to show off all the pronoun forms of a thing.".
 
 Chapter - Setting the pronouns
 
-Setting the pronouns of it to is an action out of world and applying to one thing and one pronoun lexeme.
-Carry out setting the pronouns of it to: now the pronouns of the noun are the pronoun lexeme understood.
-Report setting the pronouns of: say "The pronouns of [the noun] are now [if the pronouns of the noun are the implicit pronouns]implicit, behaving as [the third person pronouns of the noun][else][the pronouns of the noun][end if].".
+Setting the explicit pronouns of it to is an action out of world and applying to one thing and one pronoun lexeme.
+Carry out setting the explicit pronouns of it to: now the explicit pronouns of the noun are the pronoun lexeme understood.
+Report setting the explicit pronouns of: say "The explicit pronouns of [the noun] are now [if the explicit pronouns of the noun are the implicit pronouns]implicit, behaving as [end if][the implied pronouns of the noun][unless the pronouns of the noun are the implied pronouns of the noun], but other rules are making [their] pronouns [the pronouns of the noun][end if].".
 
-Section - Understand as setting the pronouns of it to (not for release)
+Section - Understand as setting the explicit pronouns of it to (not for release)
 
-Understand "set the/-- pronouns of/-- [something] to/-- [a pronoun lexeme]" as setting the pronouns of it to.
+Understand "set the/-- explicit/-- pronouns of/-- [something] to/-- [a pronoun lexeme]" as setting the explicit pronouns of it to.
 
 Volume - English Language Replacements
 
@@ -1097,12 +1098,12 @@ To say possessive:
 	let O be the prior named object;
 	[You'd think this could be "[their]" since O is already the player, but there are some other subtle differences in the original behavior.]
 	if O is the player, say "[our]";
-	otherwise say "[the O][apostrophe][if the third person pronouns of O are semantically singular]s[end if]".
+	otherwise say "[the O][apostrophe][if the pronouns of O are semantically singular]s[end if]".
 To say Possessive:
 	[Since "[possessive]" can produce more than one word for non-player objects, applying `in sentence case` can downcase things we don't want changed.]
 	let O be the prior named object;
 	if O is the player, say "[Our]";
-	otherwise say "[The O][apostrophe][if the third person pronouns of O are semantically singular]s[end if]".
+	otherwise say "[The O][apostrophe][if the pronouns of O are semantically singular]s[end if]".
 
 To say it: say "[regarding nothing]it".
 To say it's: say "[regarding nothing]it['re]".
@@ -1194,13 +1195,15 @@ Example: * They-them - Verb viewpoint follows either referent or pronoun.
 	*: "They-them"
 	
 	Include Non-binary Gender by Sadie de Might.
-	Mary is a woman. Chris is a person. Pertinent pronouns for Chris: they-them appertains.
-	The Lab is a room. Mary and Chris are in the Lab.
-	To smile is a verb. Instead of examining someone: say "[The noun] [smile] at you. [They] [have] as [their] pronouns [first pertinent pronouns of the noun].".
+	Mary is a woman.
+	There is proper-named plural-named woman called The Fates.
+	Chris is a person. Pertinent pronouns about Chris: they-them appertains.
+	The Lab is a room. Mary, Chris, and the Fates are in the Lab.
+	To smile is a verb. Instead of examining someone: say "[The noun] [smile] at you. [They] [have] as [their] pronouns [pronouns of the noun].".
 	
-	Test me with "x mary / x chris".
+	Test me with "x mary / x fates / x chris".
 
-Notice how this prints "smiles" for both people, since they're each a singular person, but it correctly prints "they have" rather than "they has" when talking about Chris.
+Notice how this prints "smiles" for both of the individual people, since they're each a singular person, while The Fates, a collection of three people, "smile".  On the other hand, this prints "they have" for both the fates and the individual Chris, since "they has" is ungrammatical.
 
 Example: * Dependency - Using different pronouns at differen times.
 
@@ -1226,7 +1229,7 @@ This extension even includes the ability to set the "pronouns" property during p
 	*: "Mutability"
 
 	Include Non-binary Gender by Sadie de Might.
-	The Lab is a room. Chris is a person in the Lab. Chris has a pronoun lexeme called pronouns. The pronouns are they-them.
+	The Lab is a room. Chris is a person in the Lab. Chris has a pronoun lexeme called explicit pronouns. The explicit pronouns are they-them.
 
 	Test me with "pronouns of chris / set pronouns of chris to she-her / pronouns chris / set pronouns of chris to implicit / pronouns chris".
 

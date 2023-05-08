@@ -70,7 +70,7 @@ To decide which personed pronoun lexeme is the expected player pronouns:
 			if P is semantically singular, decide on plural animate pronouns with person;
 	decide on P with person.
 
-Carry out requesting the pronouns of:
+Carry out requesting the personed pronouns of:
 	let P be the third person corresponding to a target of the noun in the Table of Expected Pronouns;
 	unless the noun is the player:
 		expect "[The pronouns demo about the noun]." to be about "[the noun]" with pronouns P with person called "[The noun][apostrophe][unless P is semantically plural]s[end if] pronouns";
@@ -90,7 +90,7 @@ Carry out visiting:
 		say "Not visiting [the noun]; [they]['re] not a person.[paragraph break]";
 		stop the action;
 	now the player is the noun;
-	try requesting the pronouns of the noun;
+	try requesting the personed pronouns of the noun;
 	say "[conditional paragraph break]";
 	now the player is yourself.
 
@@ -213,6 +213,7 @@ Joker's pronouns are always they-them.
 Jester's pronouns are always ze-hir.
 The sorority pronouns are always plural animate pronouns.
 Cloud's pronouns are always xey-xem.
+A person has a pronoun lexeme called explicit pronouns.
 
 When play begins:
 	let E be false;
@@ -220,7 +221,7 @@ When play begins:
 		if the target entry is yourself:
 			now E is true;
 		otherwise if E is true:
-			now the pronouns of the target entry are the third person entry.
+			now the explicit pronouns of the target entry are the third person entry.
 
 
 Non-binary Gender Testing World ends here.

@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-285">
+<Skein rootNode="node-394">
   <generator>Windows Inform 10.1.2</generator>
-  <item nodeId="node-285">
+  <item nodeId="node-394">
     <command xml:space="preserve">Mutability</command>
-    <result xml:space="preserve">Mutability&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230501 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Chris here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">Mutability&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230501 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Chris here.&#x000A;&#x000A;&gt;</commentary>
+    <result xml:space="preserve">Mutability&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230507 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Chris here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Mutability&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230507 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Chris here.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-286"/>
+      <child nodeId="node-395"/>
     </children>
   </item>
-  <item nodeId="node-286">
+  <item nodeId="node-395">
     <command xml:space="preserve">pronouns of chris</command>
     <result xml:space="preserve">Considering Chris, as for them, they have as their pronouns they-them. They are able to use such pronouns as theirs for themself. Chris's pronouns are also for others to use on them.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">Considering Chris, as for them, they have as their pronouns they-them. They are able to use such pronouns as theirs for themself. Chris's pronouns are also for others to use on them.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-287"/>
+      <child nodeId="node-396"/>
     </children>
   </item>
-  <item nodeId="node-287">
+  <item nodeId="node-396">
     <command xml:space="preserve">set pronouns of chris to she-her</command>
-    <result xml:space="preserve">The pronouns of Chris are now she-her.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">The pronouns of Chris are now she-her.&#x000A;&#x000A;&gt;</commentary>
+    <result xml:space="preserve">The explicit pronouns of Chris are now she-her.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The explicit pronouns of Chris are now she-her.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-288"/>
+      <child nodeId="node-397"/>
     </children>
   </item>
-  <item nodeId="node-288">
+  <item nodeId="node-397">
     <command xml:space="preserve">pronouns chris</command>
     <result xml:space="preserve">Considering Chris, as for her, she has as her pronouns she-her. She is able to use such pronouns as hers for herself. Chris's pronouns are also for others to use on her.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">Considering Chris, as for her, she has as her pronouns she-her. She is able to use such pronouns as hers for herself. Chris's pronouns are also for others to use on her.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-289"/>
+      <child nodeId="node-398"/>
     </children>
   </item>
-  <item nodeId="node-289">
+  <item nodeId="node-398">
     <command xml:space="preserve">set pronouns of chris to implicit</command>
-    <result xml:space="preserve">The pronouns of Chris are now implicit, behaving as he-him.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">The pronouns of Chris are now implicit, behaving as he-him.&#x000A;&#x000A;&gt;</commentary>
+    <result xml:space="preserve">The explicit pronouns of Chris are now implicit, behaving as he-him.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The explicit pronouns of Chris are now implicit, behaving as he-him.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-290"/>
+      <child nodeId="node-399"/>
     </children>
   </item>
-  <item nodeId="node-290">
+  <item nodeId="node-399">
     <command xml:space="preserve">pronouns chris</command>
     <result xml:space="preserve">Considering Chris, as for him, he has as his pronouns he-him. He is able to use such pronouns as his for himself. Chris's pronouns are also for others to use on him.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">Considering Chris, as for him, he has as his pronouns he-him. He is able to use such pronouns as his for himself. Chris's pronouns are also for others to use on him.&#x000A;&#x000A;&gt;</commentary>
