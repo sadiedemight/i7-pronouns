@@ -268,7 +268,7 @@ Constant PRONOUN_RESET_FORMS           = 7*7*2*3*2*2*PRONOUN_FORM_TYPE_RANGE*PRO
 !     This form must be lower case and is limeted to a very short length (whose details depend on the virtual machine).
 !     This form can participate in parsing.
 !   The meaning of any other type is determined by PronounSay(), which must print all forms, including forms of type 0.
-!     The additional forms exist primary to support the pronoun form "I", which must be capitalized.
+!     The additional forms exist primarily to support the pronoun form "I", which must be capitalized.
 !     These form cannot be parsed, and thus if this form is used as either the "their" or "them" form of a lexeme, that lexeme does not participate in parsing.
 !     The range of possible form types can be changed by a user that replaces PronouSay(), PronounValidate(), and the constant PRONOUN_FORM_TYPE_RANGE.
 !     This extension's definitions of these only provide one other type, 1, which indicates that the form is a string.
@@ -421,7 +421,7 @@ Array PronounReferents --> (1+PRONOUN_REFERENT_SPACE*3);
 !   Column 4: The "them" form of pronoun lexeme whose "their" form is in column 1.
 !     This is 0 if the type in column 3 is not POSSESS_PK or if column 1 is a form of a first person pronoun lexeme.
 !     This is 1 if column 1 is a proximal demonstrative ("this").
-!     Otherwise, this is the "them" formform corresponding to the "their" form in column 1.
+!     Otherwise, this is the "them" form corresponding to the "their" form in column 1.
 Array PronounDescriptors --> (1+PRONOUN_DESCRIPTOR_SPACE*4);
 
 [ PronounInitialise max  p p_row r k;
