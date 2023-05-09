@@ -3,8 +3,8 @@
   <generator>Windows Inform 10.1.2</generator>
   <item nodeId="node-394">
     <command xml:space="preserve">Mutability</command>
-    <result xml:space="preserve">Mutability&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230507 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Chris here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">Mutability&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230507 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Chris here.&#x000A;&#x000A;&gt;</commentary>
+    <result xml:space="preserve">Mutability&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230508 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see the Goggles of Double Vision and Chris here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Mutability&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230508 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see the Goggles of Double Vision and Chris here.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-395"/>
@@ -16,37 +16,82 @@
     <commentary xml:space="preserve">Considering Chris, as for them, they have as their pronouns they-them. They are able to use such pronouns as theirs for themself. Chris's pronouns are also for others to use on them.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-396"/>
+      <child nodeId="node-411"/>
     </children>
   </item>
-  <item nodeId="node-396">
-    <command xml:space="preserve">set pronouns of chris to she-her</command>
-    <result xml:space="preserve">The explicit pronouns of Chris are now she-her.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">The explicit pronouns of Chris are now she-her.&#x000A;&#x000A;&gt;</commentary>
+  <item nodeId="node-411">
+    <command xml:space="preserve">set pronouns of chris to he-him</command>
+    <result xml:space="preserve">The explicit pronouns of Chris are now he-him.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The explicit pronouns of Chris are now he-him.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-397"/>
+      <child nodeId="node-412"/>
     </children>
   </item>
-  <item nodeId="node-397">
+  <item nodeId="node-412">
+    <command xml:space="preserve">pronouns chris</command>
+    <result xml:space="preserve">Considering Chris, as for him, he has as his pronouns he-him. He is able to use such pronouns as his for himself. Chris's pronouns are also for others to use on him.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Considering Chris, as for him, he has as his pronouns he-him. He is able to use such pronouns as his for himself. Chris's pronouns are also for others to use on him.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-413"/>
+    </children>
+  </item>
+  <item nodeId="node-413">
+    <command xml:space="preserve">set pronouns chris implicit</command>
+    <result xml:space="preserve">The explicit pronouns of Chris are now implicit, behaving as she-her.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The explicit pronouns of Chris are now implicit, behaving as she-her.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-414"/>
+    </children>
+  </item>
+  <item nodeId="node-414">
     <command xml:space="preserve">pronouns chris</command>
     <result xml:space="preserve">Considering Chris, as for her, she has as her pronouns she-her. She is able to use such pronouns as hers for herself. Chris's pronouns are also for others to use on her.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">Considering Chris, as for her, she has as her pronouns she-her. She is able to use such pronouns as hers for herself. Chris's pronouns are also for others to use on her.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-398"/>
+      <child nodeId="node-415"/>
     </children>
   </item>
-  <item nodeId="node-398">
-    <command xml:space="preserve">set pronouns of chris to implicit</command>
-    <result xml:space="preserve">The explicit pronouns of Chris are now implicit, behaving as he-him.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">The explicit pronouns of Chris are now implicit, behaving as he-him.&#x000A;&#x000A;&gt;</commentary>
+  <item nodeId="node-415">
+    <command xml:space="preserve">wear goggles</command>
+    <result xml:space="preserve">(first taking the Goggles of Double Vision)&#x000A;You put on the Goggles of Double Vision.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">(first taking the Goggles of Double Vision)&#x000A;You put on the Goggles of Double Vision.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-399"/>
+      <child nodeId="node-416"/>
     </children>
   </item>
-  <item nodeId="node-399">
+  <item nodeId="node-416">
+    <command xml:space="preserve">pronouns chris</command>
+    <result xml:space="preserve">Considering Chris, as for those, they have as their pronouns plural pronouns. Those are able to use such pronouns as theirs for themselves. Chris' pronouns are also for others to use on them.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Considering Chris, as for those, they have as their pronouns plural pronouns. Those are able to use such pronouns as theirs for themselves. Chris' pronouns are also for others to use on them.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-418"/>
+    </children>
+  </item>
+  <item nodeId="node-418">
+    <command xml:space="preserve">set pronouns chris he-him</command>
+    <result xml:space="preserve">The explicit pronouns of Chris are now he-him, but other rules are making their pronouns plural pronouns.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">The explicit pronouns of Chris are now he-him, but other rules are making their pronouns plural pronouns.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-419"/>
+    </children>
+  </item>
+  <item nodeId="node-419">
+    <command xml:space="preserve">drop goggles</command>
+    <result xml:space="preserve">(first taking the Goggles of Double Vision off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">(first taking the Goggles of Double Vision off)&#x000A;Dropped.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-420"/>
+    </children>
+  </item>
+  <item nodeId="node-420">
     <command xml:space="preserve">pronouns chris</command>
     <result xml:space="preserve">Considering Chris, as for him, he has as his pronouns he-him. He is able to use such pronouns as his for himself. Chris's pronouns are also for others to use on him.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve">Considering Chris, as for him, he has as his pronouns he-him. He is able to use such pronouns as his for himself. Chris's pronouns are also for others to use on him.&#x000A;&#x000A;&gt;</commentary>

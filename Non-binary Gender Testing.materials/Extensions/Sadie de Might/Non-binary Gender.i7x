@@ -1,4 +1,4 @@
-Version 0.0.1 of Non-binary Gender by Sadie de Might begins here.
+Version 0.0.20230508 of Non-binary Gender by Sadie de Might begins here.
 
 "To replace Inform's pronoun system with something less binarist."
 
@@ -639,12 +639,9 @@ To decide which pronoun lexeme is (P - a pronoun lexeme) as a pronoun lexeme: de
 Section - Implied pronouns
 
 Yourself has a pronoun lexeme called explicit pronouns.
-Yourself can be non-binary pronouned.
 The explicit pronouns property translates into I6 as "pronouns".
-The non-binary pronouned property translates into I6 as "pronoun_nonbinary".
 
 To decide whether (O - an object) provide/provides a/the/-- explicit pronouns property: (- (({O}) provides pronouns) -).
-To decide whether (O - an object) provide/provides a/the/-- non-binary pronouned property: (- (({O}) provides pronoun_nonbinary) -).
 
 To decide which pronoun lexeme is the implied pronouns of (O - an object):
 	if O is nothing, decide on the neuter pronouns;
@@ -653,8 +650,6 @@ To decide which pronoun lexeme is the implied pronouns of (O - an object):
 		unless P is the implicit pronouns, decide on P;
 	if O is plural-named, decide on the plural pronouns;
 	if O is neuter or O is not a person, decide on the neuter pronouns;
-	if O provides the non-binary pronouned property:
-		if O is non-binary pronouned, decide on they-them;
 	if O is female, decide on she-her;
 	decide on he-him.
 
@@ -662,7 +657,6 @@ Chapter - Rulebooks
 
 Section - Appertaining
 
-[TODO: Expose these operations.
 To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule): (- PronounPertinence({P}, 0, {R}); -).
 To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a value of kind K based rule) for (V - a K): (- PronounPertinence({P}, 0, {R}, {V}); -).
 To apply (P - a personed pronoun lexeme based rule producing a value) to pertinent pronouns according to (R - a nothing based rule): (- PronounPertinence({P}, {-strong-kind:K}, {R}); -).
@@ -670,7 +664,6 @@ To apply (P - a personed pronoun lexeme based rule producing a value) to pertine
 [To decide what K is the (name of kind K) produced by the rulebook: (- ResultOfRule(0, 0, 0, {-strong-kind:K}) -).]
 To decide what K is the product of applying (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule): (- ResultOf(0, PronounPertinence({P}, 0, {R}), 0, {-strong-kind:K}) -).
 To decide what K is the product of applying (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a value of kind L based rule) for (V - a L): (- ResultOfRule(0, PronounPertinence({P}, {-strong-kind:L}, {R}, {V}), 0, {-strong-kind:K}) -).
-]
 
 To (P - a pronoun lexeme) appertains/appertain: (- if (PronounAppertains({P})) rtrue; -) - in to only.
 To (P - a non-third-person pronoun lexeme) appertains/appertain: (- if (PronounAppertains(-({P}))) rtrue; -) - in to only.
@@ -1213,25 +1206,61 @@ As with any rulebook, the behavior can depend on the state of the world.
 
 	Include Non-binary Gender by Sadie de Might.
 	The Lab is a room. There is a wearable thing called the Spectacles of Truth. It is in the Lab.
-	Mary is a woman in the Lab. The description is "Mary smiles pleasantly.[if the player is wearing the Spectacles] But you can see dimly that she's just a humainoid marionette controlled by the demon Moloch."
+	Mary is a woman in the Lab. The description is "Mary smiles pleasantly.[if the player is wearing the Spectacles] But you can see dimly that she's just a humainoid costume being worn by the demon Moloch."
 	Instead of touching Mary: say "[if the player is wearing the Spectacles]The demon[else]Mary[end if] glares at you and shakes [regarding Mary][their] head.".
 	Pertinent pronouns for Mary when the player is wearing the Spectacles: neuter pronouns appertain.
 	Pertinent pronouns for Mary: she-her appertains.
 	
-	Test me with "x mary / touch her / wear spectacles / x mary / touch her".
+	Test me with "x mary / touch her / x it / pronouns reset / wear spectacles / x mary / touch it".
 
 Example: * Mutability - Changing what pronouns are used.
 
-You can also set one pronoun lexeme to use by defining a "pronouns" property.
+Rather than writing rules for every possible situation, sometimes it's easier to just give a thing a property specifying a pertinent pronoun lexeme, which can be changed like any other property.  Name the property "explicit pronouns", and it'll be used instead of pronouns implied by the kind of object.
 
-This extension even includes the ability to set the "pronouns" property during play, though this is not included for release.
+This extension even includes an action to set this property during play, though it is not included for release.
 
 	*: "Mutability"
 
 	Include Non-binary Gender by Sadie de Might.
-	The Lab is a room. Chris is a person in the Lab. Chris has a pronoun lexeme called explicit pronouns. The explicit pronouns are they-them.
+	The Lab is a room. There is a wearable thing called the Goggles of Double Vision. It is in the Lab.
+	Chris is a female person in the Lab. Chris has a pronoun lexeme called explicit pronouns. The explicit pronouns are they-them.
+	Pertinent pronouns for Chris when the player is wearing the Goggles: plural pronouns appertain.
 
-	Test me with "pronouns of chris / set pronouns of chris to she-her / pronouns chris / set pronouns of chris to implicit / pronouns chris".
+	Test me with "pronouns of chris / set pronouns of chris to he-him / pronouns chris / set pronouns chris implicit / pronouns chris / wear goggles / pronouns chris / set pronouns chris he-him / drop goggles / pronouns chris".
+
+Notice how setting the explicit pronouns property to "the implicit pronouns" doesn't necessarily go back to the initial state when the game started.  
+
+Example: ** Layers - The layers of deciding on pronouns.
+
+As the previous example shows, there are several stages to deciding what pronouns an object has.  For one thing, the "pertinent pronouns rules" is just one possible rulebook that can list pronouns. For another thing, using a pronoun to talk about an object is jut one thing that can be done with such a rulebook.
+
+We can provide a different rulebook to provide the listing, and we can use the listing to do somehing else. That's also defined by a rule.
+
+	*: "Layers"
+
+	Include Non-binary Gender by Sadie de Might.
+	Alice and Bob are people. The Lab is a room. Everyone is in the Lab.
+
+	The say third person pronouns rulebook is a personed pronoun lexeme based rulebook.
+	Say third person pronouns rule about a third-person personed pronoun lexeme (called P): say "[P], ".
+	
+	The narrow pronoun understanding rules are an object based rulebook.
+	The broad pronoun understanding rules are an object based rulebook.
+	Broad pronoun understanding for Alice (this is the Alice as she rule): she-her appertains.
+	The Alice as she rule is listed in the narrow pronoun understanding rules.
+	Broad pronoun understanding for Alice: I-me appertains.
+	Broad pronoun understanding for Alice: they-them appertains.
+	Broad pronoun understanding for Bob: they-them appertains.
+	Broad pronoun understanding for Bob (this is the Bob as he rule): he-him appertains.
+	The Bob as he rule is listed in the narrow pronoun understanding rules.
+	
+	To say list of pronouns for (N - a person) using (R - an object based rulebook):
+		apply the say third person pronouns rulebook to pertinent pronouns according to R for N.
+
+	Instead of examining someone:
+		say "A narrow understanding of [the noun]'s third-person pronouns includes [list of pronouns for the noun using the narrow pronoun understanding rules] and that's all, while a broad understanding encompasses [list of pronouns for the noun using the broad pronoun understanding rules] which is better.".
+		
+	Test me with "x alice / x bob".
 
 Example: ** New Pronouns - Adding a new pronoun lexeme and using it during play.
 

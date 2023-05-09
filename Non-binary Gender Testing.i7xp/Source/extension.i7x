@@ -132,21 +132,51 @@ Example: * Dependency
 
 	Include Non-binary Gender by Sadie de Might.
 	The Lab is a room. There is a wearable thing called the Spectacles of Truth. It is in the Lab.
-	Mary is a woman in the Lab. The description is "Mary smiles pleasantly.[if the player is wearing the Spectacles] But you can see dimly that she's just a humainoid marionette controlled by the demon Moloch."
+	Mary is a woman in the Lab. The description is "Mary smiles pleasantly.[if the player is wearing the Spectacles] But you can see dimly that she's just a humainoid costume being worn by the demon Moloch."
 	Instead of touching Mary: say "[if the player is wearing the Spectacles]The demon[else]Mary[end if] glares at you and shakes [regarding Mary][their] head.".
 	Pertinent pronouns for Mary when the player is wearing the Spectacles: neuter pronouns appertain.
 	Pertinent pronouns for Mary: she-her appertains.
 	
-	Test me with "x mary / touch her / wear spectacles / x mary / touch her".
+	Test me with "x mary / touch her / x it / pronouns reset / wear spectacles / x mary / touch it".
 
 Example: * Mutablitiy
 
 	*: "Mutability"
 
 	Include Non-binary Gender by Sadie de Might.
-	The Lab is a room. Chris is a person in the Lab. Chris has a pronoun lexeme called explicit pronouns. The explicit pronouns are they-them.
+	The Lab is a room. There is a wearable thing called the Goggles of Double Vision. It is in the Lab.
+	Chris is a female person in the Lab. Chris has a pronoun lexeme called explicit pronouns. The explicit pronouns are they-them.
+	Pertinent pronouns for Chris when the player is wearing the Goggles: plural pronouns appertain.
 
-	Test me with "pronouns of chris / set pronouns of chris to she-her / pronouns chris / set pronouns of chris to implicit / pronouns chris".
+	Test me with "pronouns of chris / set pronouns of chris to he-him / pronouns chris / set pronouns chris implicit / pronouns chris / wear goggles / pronouns chris / set pronouns chris he-him / drop goggles / pronouns chris".
+
+Example: ** Layers
+
+	*: "Layers"
+
+	Include Non-binary Gender by Sadie de Might.
+	Alice and Bob are people. The Lab is a room. Everyone is in the Lab.
+
+	The say third person pronouns rulebook is a personed pronoun lexeme based rulebook.
+	Say third person pronouns rule about a third-person personed pronoun lexeme (called P): say "[P], ".
+	
+	The narrow pronoun understanding rules are an object based rulebook.
+	The broad pronoun understanding rules are an object based rulebook.
+	Broad pronoun understanding for Alice (this is the Alice as she rule): she-her appertains.
+	The Alice as she rule is listed in the narrow pronoun understanding rules.
+	Broad pronoun understanding for Alice: I-me appertains.
+	Broad pronoun understanding for Alice: they-them appertains.
+	Broad pronoun understanding for Bob: they-them appertains.
+	Broad pronoun understanding for Bob (this is the Bob as he rule): he-him appertains.
+	The Bob as he rule is listed in the narrow pronoun understanding rules.
+	
+	To say list of pronouns for (N - a person) using (R - an object based rulebook):
+		apply the say third person pronouns rulebook to pertinent pronouns according to R for N.
+
+	Instead of examining someone:
+		say "A narrow understanding of [the noun]'s third-person pronouns includes [list of pronouns for the noun using the narrow pronoun understanding rules] and that's all, while a broad understanding encompasses [list of pronouns for the noun using the broad pronoun understanding rules] which is better.".
+		
+	Test me with "x alice / x bob".
 
 Example: ** New Pronouns
 
