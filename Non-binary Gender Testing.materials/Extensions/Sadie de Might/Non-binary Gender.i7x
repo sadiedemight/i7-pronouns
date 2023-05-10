@@ -657,13 +657,13 @@ Chapter - Rulebooks
 
 Section - Appertaining
 
-To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule): (- PronounPertinence({P}, 0, {R}); -).
-To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a value of kind K based rule) for (V - a K): (- PronounPertinence({P}, 0, {R}, {V}); -).
-To apply (P - a personed pronoun lexeme based rule producing a value) to pertinent pronouns according to (R - a nothing based rule): (- PronounPertinence({P}, {-strong-kind:K}, {R}); -).
-To apply (P - a personed pronoun lexeme based rule producing a value) to pertinent pronouns according to (R - a value of kind K based rule) for (V - a K): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {V}); -).
-[To decide what K is the (name of kind K) produced by the rulebook: (- ResultOfRule(0, 0, 0, {-strong-kind:K}) -).]
-To decide what K is the product of applying (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule): (- ResultOf(0, PronounPertinence({P}, 0, {R}), 0, {-strong-kind:K}) -).
-To decide what K is the product of applying (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a value of kind L based rule) for (V - a L): (- ResultOfRule(0, PronounPertinence({P}, {-strong-kind:L}, {R}, {V}), 0, {-strong-kind:K}) -).
+To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule): (- PronounPertinence({P}, 0, {R}, {B}); -).
+To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) then (B - a K based rule) for (V - a value of kind K): (- PronounPertinence({P}, 0, {R}, {B}, {V}); -).
+[To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}); -).
+To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a L based rule) then (B - a L based rule) for (V - a value of kind L): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}, {V}); -).
+To decide what K is the (V - name of kind of value of kind K) produced by the rulebook: (- ResultOfRule(0, 0, 0, {-strong-kind:K}) -).
+][To decide what K is the product of applying (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule): (- ResultOf(0, PronounPertinence({P}, 0, {R}), 0, {-strong-kind:K}) -).
+To decide what K is the product of applying (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a value of kind L based rule) for (V - a L): (- ResultOfRule(0, PronounPertinence({P}, {-strong-kind:L}, {R}, {V}), 0, {-strong-kind:K}) -).]
 
 To (P - a pronoun lexeme) appertains/appertain: (- if (PronounAppertains({P})) rtrue; -) - in to only.
 To (P - a non-third-person pronoun lexeme) appertains/appertain: (- if (PronounAppertains(-({P}))) rtrue; -) - in to only.
@@ -692,6 +692,10 @@ To decide whether (P - a non-third-person pronoun lexeme) already appertains: (-
 -).
 To decide which number is the count of pronoun lexemes that already appertain: (- (pronoun_pertinence_info_active & 255) -).
 
+The implied object pronouns appertain if nothing else rules are an object based rulebook.
+Implied object pronouns appertain if nothing else rule for an object (called O):
+	unless some pronouns already appertain, the implied pronouns of O appertain.
+	
 The pertinent pronouns rules are a object based rulebook.
 
 The elaborated pertinent pronouns rules are a object based rulebook.
@@ -699,7 +703,7 @@ The elaborated pertinent pronouns rules are a object based rulebook.
 Elaborated pertinent pronouns for an object (called O) (this is the try pertinent pronouns before elaborating rule):
 	abide by the pertinent pronouns rules for O.
 
-Elaborated pertinent pronouns for an object (called O) (this is the implied object pronouns appertain if needed rule):
+Elaborated pertinent pronouns for an object (called O) (this is the implied object pronouns appertain if nothing else rule):
 	unless some pronouns already appertain, the implied pronouns of O appertain.
 
 Elaborated pertinent pronouns for an object (called O) (this is the ambiguously plural object pronouns pertain by default rule):
@@ -724,7 +728,7 @@ Global pronoun_pertinence_info_active;
 	return decided;
 ];
 
-[ PronounPertinence rule kind rulebook parameter  old_rule old_kind old_info;
+[ PronounPertinence rule kind rulebook backup parameter  old_rule old_kind old_info;
 	old_rule = pronoun_pertinence_rule;
 	old_kind = pronoun_pertinence_kind;
 	! Note that the kind of "parameter" is not stored; it is assume that the rules within rulebook know that.
@@ -733,7 +737,7 @@ Global pronoun_pertinence_info_active;
 	pronoun_pertinence_kind = kind;
 	pronoun_pertinence_info_active = 0;
 	FollowRulebook(rulebook, parameter, true);
-	(+ the implied object pronouns appertain if needed rule +)();
+	FollowRulebook(backup, parameter, true);
 	pronoun_pertinence_info = pronoun_pertinence_info_active;
 	pronoun_pertinence_rule = old_rule;
 	pronoun_pertinence_kind = old_kind;
@@ -756,7 +760,7 @@ To decide which pronoun lexeme is the/-- pronouns of (O - an object): (- Pronoun
 Include (-
 
 [ PronounOfObject obj;
-	PronounPertinence((+ the produce pronouns rule +), 0, (+ pronouns pertinent to referents +), obj);
+	PronounPertinence((+ the produce pronouns rule +), 0, (+ pronouns pertinent to referents +), (+ the implied object pronouns appertain if nothing else rules +), obj);
 	return latest_rule_result-->2;
 ];
 
@@ -1012,7 +1016,7 @@ Global pronoun_pertinence_parameter;
 	if (obj == player) return;
 	old_parameter = pronoun_pertinence_parameter;
 	pronoun_pertinence_parameter = obj;
-	PronounPertinence(PRONOUN_REFERS_TO_OBJECT_R, 0, (+ pronouns pertinent to referents +), obj);
+	PronounPertinence(PRONOUN_REFERS_TO_OBJECT_R, 0, (+ pronouns pertinent to referents +), (+ the implied object pronouns appertain if nothing else rules +), obj);
 	pronoun_pertinence_parameter = old_parameter;
 	! Original: obj  x bm g;
 	! if (obj == player) return;
@@ -1230,19 +1234,44 @@ This extension even includes an action to set this property during play, though 
 
 Notice how setting the explicit pronouns property to "the implicit pronouns" doesn't necessarily go back to the initial state when the game started.  
 
+Example: ** Flexability - Changing what a pronoun listing is used for.
+
+As the previous example shows, several things interact to deciding what pronouns an object has.
+
+First, there's the rulebook that lists pronouns that are applicable. The "pertinent pronouns rules" is just one possible such rulebook.
+
+Second, there's what is done with each pronoun the rulebook lists.  We've already seen that the first item in the listing gets used to select one pronoun lexeme for use in talking about an object, and that other listed pronouns are used to selecetd which pronouns like "it" are updated to refer to the object. We can do other things with each pronoun.
+
+And third, there are some additional pronouns listed as a backup if the rulebook doesn't list anything.  We can change these backup choices, too.
+
+Actually, all three of these choices are controlled with rulebooks.  For now, let's re-use the listing rulebook and the backup rulebook, and just change what gets done with each pronoun listed.
+
+	*: "Flexability"
+
+	Include Non-binary Gender by Sadie de Might.
+	Alice and Bob are people. The Lab is a room. Everyone is in the Lab.
+	Pertinent pronouns for Alice: she-her appertais; they-them appertains.
+	Pertinent pronouns for Bob: they-them appertains; he-him appertains.
+
+	The say third person pronouns rulebook is a personed pronoun lexeme based rulebook.
+	Say third person pronouns rule about a third-person personed pronoun lexeme (called P): say "[P], ".
+	To say list of pronouns for (N - a person):
+		let P be the say third person pronouns rulebook;
+		let R be the pertinent pronouns rulebook;
+		let B be the implied object pronouns appertain if nothing else rule;
+		apply P to pertinent pronouns according to R then B for N.
+		
+	Instead of examining someone:
+		say "[The noun]'s third-person pronouns include [list of pronouns for the noun]and that's all.".
+		
+	Test me with "x alice / x bob".
+
 Example: ** Layers - The layers of deciding on pronouns.
-
-As the previous example shows, there are several stages to deciding what pronouns an object has.  For one thing, the "pertinent pronouns rules" is just one possible rulebook that can list pronouns. For another thing, using a pronoun to talk about an object is jut one thing that can be done with such a rulebook.
-
-We can provide a different rulebook to provide the listing, and we can use the listing to do somehing else. That's also defined by a rule.
 
 	*: "Layers"
 
 	Include Non-binary Gender by Sadie de Might.
 	Alice and Bob are people. The Lab is a room. Everyone is in the Lab.
-
-	The say third person pronouns rulebook is a personed pronoun lexeme based rulebook.
-	Say third person pronouns rule about a third-person personed pronoun lexeme (called P): say "[P], ".
 	
 	The narrow pronoun understanding rules are an object based rulebook.
 	The broad pronoun understanding rules are an object based rulebook.
@@ -1254,12 +1283,16 @@ We can provide a different rulebook to provide the listing, and we can use the l
 	Broad pronoun understanding for Bob (this is the Bob as he rule): he-him appertains.
 	The Bob as he rule is listed in the narrow pronoun understanding rules.
 	
+	The say third person pronouns rulebook is a personed pronoun lexeme based rulebook.
+	Say third person pronouns rule about a third-person personed pronoun lexeme (called P): say "[P], ".
 	To say list of pronouns for (N - a person) using (R - an object based rulebook):
-		apply the say third person pronouns rulebook to pertinent pronouns according to R for N.
+		let P be the say third person pronouns rulebook;
+		let B be the implied object pronouns appertain if nothing else rules;
+		apply P to pertinent pronouns according to R then B for N.
 
 	Instead of examining someone:
-		say "A narrow understanding of [the noun]'s third-person pronouns includes [list of pronouns for the noun using the narrow pronoun understanding rules] and that's all, while a broad understanding encompasses [list of pronouns for the noun using the broad pronoun understanding rules] which is better.".
-		
+		say "A narrow understanding of [the noun]'s third-person pronouns includes [list of pronouns for the noun using the narrow pronoun understanding rules]and that's all, while a broad understanding encompasses [list of pronouns for the noun using the broad pronoun understanding rules]which is better.".
+
 	Test me with "x alice / x bob".
 
 Example: ** New Pronouns - Adding a new pronoun lexeme and using it during play.

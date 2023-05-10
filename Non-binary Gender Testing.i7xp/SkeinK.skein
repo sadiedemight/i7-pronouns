@@ -2,9 +2,9 @@
 <Skein rootNode="node-400">
   <generator>Windows Inform 10.1.2</generator>
   <item nodeId="node-400">
-    <command xml:space="preserve">Layers</command>
-    <result xml:space="preserve">Layers&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230509 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Alice and Bob here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">Layers&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230509 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Alice and Bob here.&#x000A;&#x000A;&gt;</commentary>
+    <command xml:space="preserve">Flexability</command>
+    <result xml:space="preserve">Utility&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230510 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Alice and Bob here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Utility&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230510 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Alice and Bob here.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-427"/>
@@ -12,8 +12,8 @@
   </item>
   <item nodeId="node-427">
     <command xml:space="preserve">x alice</command>
-    <result xml:space="preserve">A narrow understanding of Alice's third-person pronouns includes she-her,  and that's all, while a broad understanding encompasses she-her, they-them,  which is better.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">A narrow understanding of Alice's third-person pronouns includes she-her,  and that's all, while a broad understanding encompasses she-her, they-them,  which is better.&#x000A;&#x000A;&gt;</commentary>
+    <result xml:space="preserve">Alice's third-person pronouns include she-her, they-them, and that's all.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Alice's third-person pronouns include she-her, they-them, and that's all.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-429"/>
@@ -21,8 +21,8 @@
   </item>
   <item nodeId="node-429">
     <command xml:space="preserve">x bob</command>
-    <result xml:space="preserve">A narrow understanding of Bob's third-person pronouns includes he-him,  and that's all, while a broad understanding encompasses they-them, he-him,  which is better.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">A narrow understanding of Bob's third-person pronouns includes he-him,  and that's all, while a broad understanding encompasses they-them, he-him,  which is better.&#x000A;&#x000A;&gt;</commentary>
+    <result xml:space="preserve">Bob's third-person pronouns include they-them, he-him, and that's all.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Bob's third-person pronouns include they-them, he-him, and that's all.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
   </item>
 </Skein>

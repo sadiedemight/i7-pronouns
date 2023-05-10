@@ -150,15 +150,34 @@ Example: * Mutablitiy
 
 	Test me with "pronouns of chris / set pronouns of chris to he-him / pronouns chris / set pronouns chris implicit / pronouns chris / wear goggles / pronouns chris / set pronouns chris he-him / drop goggles / pronouns chris".
 
-Example: ** Layers
+Example: ** Utility
 
-	*: "Layers"
+	*: "Utility"
 
 	Include Non-binary Gender by Sadie de Might.
 	Alice and Bob are people. The Lab is a room. Everyone is in the Lab.
+	Pertinent pronouns for Alice: she-her appertains; they-them appertains.
+	Pertinent pronouns for Bob: they-them appertains; he-him appertains.
 
 	The say third person pronouns rulebook is a personed pronoun lexeme based rulebook.
 	Say third person pronouns rule about a third-person personed pronoun lexeme (called P): say "[P], ".
+	To say list of pronouns for (N - a person):
+		let P be the say third person pronouns rulebook;
+		let R be the pertinent pronouns rulebook;
+		let B be the implied object pronouns appertain if nothing else rules;
+		apply P to pertinent pronouns according to R then B for N.
+		
+	Instead of examining someone:
+		say "[The noun]'s third-person pronouns include [list of pronouns for the noun]and that's all.".
+
+	Test me with "x alice / x bob".
+
+Example: ** Flexability
+
+	*: "Flexability"
+
+	Include Non-binary Gender by Sadie de Might.
+	Alice and Bob are people. The Lab is a room. Everyone is in the Lab.
 	
 	The narrow pronoun understanding rules are an object based rulebook.
 	The broad pronoun understanding rules are an object based rulebook.
@@ -170,12 +189,16 @@ Example: ** Layers
 	Broad pronoun understanding for Bob (this is the Bob as he rule): he-him appertains.
 	The Bob as he rule is listed in the narrow pronoun understanding rules.
 	
+	The say third person pronouns rulebook is a personed pronoun lexeme based rulebook.
+	Say third person pronouns rule about a third-person personed pronoun lexeme (called P): say "[P], ".
 	To say list of pronouns for (N - a person) using (R - an object based rulebook):
-		apply the say third person pronouns rulebook to pertinent pronouns according to R for N.
+		let P be the say third person pronouns rulebook;
+		let B be the implied object pronouns appertain if nothing else rules;
+		apply P to pertinent pronouns according to R then B for N.
 
 	Instead of examining someone:
-		say "A narrow understanding of [the noun]'s third-person pronouns includes [list of pronouns for the noun using the narrow pronoun understanding rules] and that's all, while a broad understanding encompasses [list of pronouns for the noun using the broad pronoun understanding rules] which is better.".
-		
+		say "A narrow understanding of [the noun]'s third-person pronouns includes [list of pronouns for the noun using the narrow pronoun understanding rules]and that's all, while a broad understanding encompasses [list of pronouns for the noun using the broad pronoun understanding rules]which is better.".
+	
 	Test me with "x alice / x bob".
 
 Example: ** New Pronouns
