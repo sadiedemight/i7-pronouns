@@ -1,4 +1,4 @@
-Version 0.0.20230508 of Non-binary Gender by Sadie de Might begins here.
+Version 0.0.20230514 of Non-binary Gender by Sadie de Might begins here.
 
 "To replace Inform's pronoun system with something less binarist."
 
@@ -659,11 +659,9 @@ Section - Appertaining
 
 To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule): (- PronounPertinence({P}, 0, {R}, {B}); -).
 To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) then (B - a K based rule) for (V - a value of kind K): (- PronounPertinence({P}, 0, {R}, {B}, {V}); -).
-[To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}); -).
+To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}); -).
 To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a L based rule) then (B - a L based rule) for (V - a value of kind L): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}, {V}); -).
 To decide what K is the (V - name of kind of value of kind K) produced by the rulebook: (- ResultOfRule(0, 0, 0, {-strong-kind:K}) -).
-][To decide what K is the product of applying (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule): (- ResultOf(0, PronounPertinence({P}, 0, {R}), 0, {-strong-kind:K}) -).
-To decide what K is the product of applying (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a value of kind L based rule) for (V - a L): (- ResultOfRule(0, PronounPertinence({P}, {-strong-kind:L}, {R}, {V}), 0, {-strong-kind:K}) -).]
 
 To (P - a pronoun lexeme) appertains/appertain: (- if (PronounAppertains({P})) rtrue; -) - in to only.
 To (P - a non-third-person pronoun lexeme) appertains/appertain: (- if (PronounAppertains(-({P}))) rtrue; -) - in to only.
@@ -1234,7 +1232,7 @@ This extension even includes an action to set this property during play, though 
 
 Notice how setting the explicit pronouns property to "the implicit pronouns" doesn't necessarily go back to the initial state when the game started.  
 
-Example: ** Flexability - Changing what a pronoun listing is used for.
+Example: ** Utility - Changing what a pronoun listing is used for.
 
 As the previous example shows, several things interact to deciding what pronouns an object has.
 
@@ -1246,7 +1244,7 @@ And third, there are some additional pronouns listed as a backup if the rulebook
 
 Actually, all three of these choices are controlled with rulebooks.  For now, let's re-use the listing rulebook and the backup rulebook, and just change what gets done with each pronoun listed.
 
-	*: "Flexability"
+	*: "Utility"
 
 	Include Non-binary Gender by Sadie de Might.
 	Alice and Bob are people. The Lab is a room. Everyone is in the Lab.
@@ -1266,9 +1264,11 @@ Actually, all three of these choices are controlled with rulebooks.  For now, le
 		
 	Test me with "x alice / x bob".
 
-Example: ** Layers - The layers of deciding on pronouns.
+Example: ** Flexability - Changing which pronouns are listed.
 
-	*: "Layers"
+Continuing the previous example, we can use various pronoun listing rulebooks.
+
+	*: "Flexability"
 
 	Include Non-binary Gender by Sadie de Might.
 	Alice and Bob are people. The Lab is a room. Everyone is in the Lab.
@@ -1294,6 +1294,42 @@ Example: ** Layers - The layers of deciding on pronouns.
 		say "A narrow understanding of [the noun]'s third-person pronouns includes [list of pronouns for the noun using the narrow pronoun understanding rules]and that's all, while a broad understanding encompasses [list of pronouns for the noun using the broad pronoun understanding rules]which is better.".
 
 	Test me with "x alice / x bob".
+
+Example: ** Contingency - A backup plan for what pronouns are listed.
+
+Continuing the previous example, we can use a different rulebook for what to do after the listing rulebook has finished.
+
+This lets an author design phrases that take just a listing rulebook, and use it to apply a matching combination of a utility rulebook and a backup rulebook, where the backup rulebook makes sure that the utility rulebook has seen a listing that it's happy with.
+
+For example, when deciding what pronoun to use when talking about an object, it would be quite unclear what to do if the listing were to have no pronouns at all, so the backup rulebook checks whether anything was listed, and if not, it makes the best choice and and and lists at least one more pronoun lexeme as pertinent.
+
+	*: "Contingency"
+
+	Include Non-binary Gender by Sadie de Might.
+
+	The say third person pronouns rulebook is a personed pronoun lexeme based rulebook.
+	Say third person pronouns rule about a third-person personed pronoun lexeme (called P): say "[P], ".
+	
+	The they-them appertains of all else fails rulebook is an object based rulebook.
+	They-them appertains of all else fails rule: unless some pronouns already appertain, they-them appertains.
+	
+	To say list of pronouns for (N - a person) using (R - an object based rulebook):
+		apply the say third person pronouns rulebook to pertinent pronouns according to R then the they-them appertains of all else fails rulebook for N.
+
+	Alice and Bob are people. The Lab is a room. Everyone is in the Lab.
+	The narrow pronoun understanding rules are an object based rulebook.
+	The broad pronoun understanding rules are an object based rulebook.
+	Broad pronoun understanding for Alice (this is the Alice as she rule): she-her appertains.
+	The Alice as she rule is listed in the narrow pronoun understanding rules.
+	Broad pronoun understanding for Alice: I-me appertains.
+	Broad pronoun understanding for Alice: they-them appertains.
+
+	Instead of examining someone:
+		say "A narrow understanding of [the noun]'s third-person pronouns includes [list of pronouns for the noun using the narrow pronoun understanding rules]and that's all, while a broad understanding encompasses [list of pronouns for the noun using the broad pronoun understanding rules]which might be better.".
+
+	Test me with "x alice / x bob".
+
+Notice that we need at lease one phrase for examining what pronouns have already been listed. This example uses the codition "whether some pronouns already appertain". We'll look at this more in later examples.
 
 Example: ** New Pronouns - Adding a new pronoun lexeme and using it during play.
 

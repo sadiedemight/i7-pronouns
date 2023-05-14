@@ -201,6 +201,34 @@ Example: ** Flexability
 	
 	Test me with "x alice / x bob".
 
+Example: ** Contingency
+
+	*: "Contingency"
+	
+	Include Non-binary Gender by Sadie de Might.
+
+	The say third person pronouns rulebook is a personed pronoun lexeme based rulebook.
+	Say third person pronouns rule about a third-person personed pronoun lexeme (called P): say "[P], ".
+	
+	The they-them appertains of all else fails rulebook is an object based rulebook.
+	They-them appertains of all else fails rule: unless some pronouns already appertain, they-them appertains.
+	
+	To say list of pronouns for (N - a person) using (R - an object based rulebook):
+		apply the say third person pronouns rulebook to pertinent pronouns according to R then the they-them appertains of all else fails rulebook for N.
+
+	Alice and Bob are people. The Lab is a room. Everyone is in the Lab.
+	The narrow pronoun understanding rules are an object based rulebook.
+	The broad pronoun understanding rules are an object based rulebook.
+	Broad pronoun understanding for Alice (this is the Alice as she rule): she-her appertains.
+	The Alice as she rule is listed in the narrow pronoun understanding rules.
+	Broad pronoun understanding for Alice: I-me appertains.
+	Broad pronoun understanding for Alice: they-them appertains.
+
+	Instead of examining someone:
+		say "A narrow understanding of [the noun]'s third-person pronouns includes [list of pronouns for the noun using the narrow pronoun understanding rules]and that's all, while a broad understanding encompasses [list of pronouns for the noun using the broad pronoun understanding rules]which might be better.".
+
+	Test me with "x alice / x bob".
+
 Example: ** New Pronouns
 
 	*: "New Pronouns"
