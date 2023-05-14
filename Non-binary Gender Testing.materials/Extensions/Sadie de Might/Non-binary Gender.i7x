@@ -1192,8 +1192,8 @@ Example: * They-them - Verb viewpoint follows either referent or pronoun.
 	Include Non-binary Gender by Sadie de Might.
 	Mary is a woman.
 	There is proper-named plural-named woman called The Fates.
-	Chris is a person. Pertinent pronouns about Chris: they-them appertains.
-	The Lab is a room. Mary, Chris, and the Fates are in the Lab.
+	Chris is a person. Pertinent pronouns for Chris: they-them appertains.
+	The Lab is a room. Mary, the Fates, and Chris are in the Lab.
 	To smile is a verb. Instead of examining someone: say "[The noun] [smile] at you. [They] [have] as [their] pronouns [pronouns of the noun].".
 	
 	Test me with "x mary / x fates / x chris".
@@ -1248,7 +1248,7 @@ Actually, all three of these choices are controlled with rulebooks.  For now, le
 
 	Include Non-binary Gender by Sadie de Might.
 	Alice and Bob are people. The Lab is a room. Everyone is in the Lab.
-	Pertinent pronouns for Alice: she-her appertais; they-them appertains.
+	Pertinent pronouns for Alice: she-her appertains; they-them appertains.
 	Pertinent pronouns for Bob: they-them appertains; he-him appertains.
 
 	The say third person pronouns rulebook is a personed pronoun lexeme based rulebook.
@@ -1256,12 +1256,12 @@ Actually, all three of these choices are controlled with rulebooks.  For now, le
 	To say list of pronouns for (N - a person):
 		let P be the say third person pronouns rulebook;
 		let R be the pertinent pronouns rulebook;
-		let B be the implied object pronouns appertain if nothing else rule;
+		let B be the implied object pronouns appertain if nothing else rules;
 		apply P to pertinent pronouns according to R then B for N.
 		
 	Instead of examining someone:
 		say "[The noun]'s third-person pronouns include [list of pronouns for the noun]and that's all.".
-		
+
 	Test me with "x alice / x bob".
 
 Example: ** Flexability - Changing which pronouns are listed.
@@ -1292,7 +1292,7 @@ Continuing the previous example, we can use various pronoun listing rulebooks.
 
 	Instead of examining someone:
 		say "A narrow understanding of [the noun]'s third-person pronouns includes [list of pronouns for the noun using the narrow pronoun understanding rules]and that's all, while a broad understanding encompasses [list of pronouns for the noun using the broad pronoun understanding rules]which is better.".
-
+	
 	Test me with "x alice / x bob".
 
 Example: ** Contingency - A backup plan for what pronouns are listed.
