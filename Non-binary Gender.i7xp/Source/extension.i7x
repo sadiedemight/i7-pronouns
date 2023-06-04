@@ -658,9 +658,13 @@ Chapter - Rulebooks
 Section - Appertaining
 
 To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule): (- PronounPertinence({P}, 0, {R}, {B}); -).
+To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) without backup: (- PronounPertinence({P}, 0, {R}); -).
 To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) then (B - a K based rule) for (V - a value of kind K): (- PronounPertinence({P}, 0, {R}, {B}, {V}); -).
+To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) for (V - a value of kind K) without backup: (- PronounPertinence({P}, 0, {R}, 0, {V}); -).
 To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}); -).
+To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule) without backup: (- PronounPertinence({P}, {-strong-kind:K}, {R}); -).
 To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a L based rule) then (B - a L based rule) for (V - a value of kind L): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}, {V}); -).
+To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a L based rule) for (V - a value of kind L) without backup: (- PronounPertinence({P}, {-strong-kind:K}, {R}, 0, {V}); -).
 To decide what K is the (V - name of kind of value of kind K) produced by the rulebook: (- ResultOfRule(0, 0, 0, {-strong-kind:K}) -).
 
 To (P - a pronoun lexeme) appertains/appertain: (- if (PronounAppertains({P})) rtrue; -) - in to only.
@@ -735,7 +739,7 @@ Global pronoun_pertinence_info_active;
 	pronoun_pertinence_kind = kind;
 	pronoun_pertinence_info_active = 0;
 	FollowRulebook(rulebook, parameter, true);
-	FollowRulebook(backup, parameter, true);
+	if (backup) FollowRulebook(backup, parameter, true);
 	pronoun_pertinence_info = pronoun_pertinence_info_active;
 	pronoun_pertinence_rule = old_rule;
 	pronoun_pertinence_kind = old_kind;
@@ -1297,7 +1301,7 @@ Continuing the previous example, we can use various pronoun listing rulebooks.
 
 Example: ** Contingency - A backup plan for what pronouns are listed.
 
-Continuing the previous example, we can use a different rulebook for what to do after the listing rulebook has finished.
+Continuing the previous examples, we can use a different rulebook for what to do after the listing rulebook has finished.
 
 This lets an author design phrases that take just a listing rulebook, and use it to apply a matching combination of a utility rulebook and a backup rulebook, where the backup rulebook makes sure that the utility rulebook has seen a listing that it's happy with.
 
@@ -1325,11 +1329,37 @@ For example, when deciding what pronoun to use when talking about an object, it 
 	Broad pronoun understanding for Alice: they-them appertains.
 
 	Instead of examining someone:
-		say "A narrow understanding of [the noun]'s third-person pronouns includes [list of pronouns for the noun using the narrow pronoun understanding rules]and that's all, while a broad understanding encompasses [list of pronouns for the noun using the broad pronoun understanding rules]which might be better.".
+		say "A narrow understanding of [the noun]'s third-person pronouns includes [list of pronouns for the noun using the narrow pronoun understanding rules]and that's all, while a broad understanding encompasses [list of pronouns for the noun using the broad pronoun understanding rules]which is better.".
 
 	Test me with "x alice / x bob".
 
 Notice that we need at lease one phrase for examining what pronouns have already been listed. This example uses the codition "whether some pronouns already appertain". We'll look at this more in later examples.
+
+Example: ** Applicability - what things pronounns can be listed for.
+
+Usually, a pronoun listing rulebook lists pronouns for an object, since objects are usually what a pronoun applies to, but sometimes a phrase needs to start with something else; we can use a rulebook based on any kind.
+
+	*: "Applicability"
+
+	Include Non-binary Gender by Sadie de Might.
+	The Foyer is a room. The Men's Room is north of the Foyer. The Women's Room is south of the Foyer.
+	The toilets is a region. The Men's Room and the Women's Room are in the toilets.
+	
+	The applicable toilet rules is a room based rulebook.
+	Applicable toilet for the Men's Room: he-him appertains; they-them appertains.
+	Applicable toilet for the Women's Room: she-her appertains; they-them appertains.
+	
+	The allow player toilet rules is a personed pronoun lexeme based rulebook.
+	Allow player toilet rule about a third-person personed pronoun lexeme (called P): if P as third-person is the pronouns of the player, the rule succeeds.
+	Check going to a room (called R) which is in the toilets:
+		apply the allow player toilet rules to pertinent pronouns according to the applicable toilet rules for R without backup;
+		unless the rule succeeded, instead say "You stop dead as a claxon sounds.".
+
+	The explicit pronouns of yourself are she-her.
+	
+	Test me with "n / s / n / set pronouns of me to they-them / n"
+
+Note that we can skip the backup rulebook explicitly in the event that the utility rulebook really doesn't need one.  Also note that the utility rulebook can choose to end the listing of pronouns early by having the listing rulebook succeed or fail.
 
 Example: ** New Pronouns - Adding a new pronoun lexeme and using it during play.
 
