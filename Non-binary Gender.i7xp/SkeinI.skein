@@ -1,55 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Skein rootNode="node-291">
+<Skein rootNode="node-2">
   <generator>Windows Inform 10.1.2</generator>
-  <item nodeId="node-291">
-    <command xml:space="preserve">New Pronouns</command>
-    <result xml:space="preserve">WARNING: No need to use pronoun reference space more than 5.&#x000A;New Pronouns&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230501 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Chris and Pat here.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">WARNING: No need to use pronoun reference space more than 5.&#x000A;New Pronouns&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230501 / Inform 7 v10.1.2 / D&#x000A;&#x000A;Lab&#x000A;You can see Chris and Pat here.&#x000A;&#x000A;&gt;</commentary>
+  <item nodeId="node-2">
+    <command xml:space="preserve">Introspection</command>
+    <result xml:space="preserve">Introspection&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230611 / Inform 7 v10.1.2 / D&#x000A;&#x000A;lab&#x000A;You can see Smith, Baker, Tailor, Clerk, Steward and Prince here.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">Introspection&#x000A;An Interactive Fiction&#x000A;Release 1 / Serial number 230611 / Inform 7 v10.1.2 / D&#x000A;&#x000A;lab&#x000A;You can see Smith, Baker, Tailor, Clerk, Steward and Prince here.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-298"/>
+      <child nodeId="node-3"/>
     </children>
   </item>
-  <item nodeId="node-298">
-    <command xml:space="preserve">pronouns of chris and pat</command>
-    <result xml:space="preserve">Considering Chris, as for them, they have as their pronouns they-them. They are able to use such pronouns as theirs for themself. Chris's pronouns are also for others to use on them.&#x000A;Considering Pat, as for xem, xe has as xyr pronouns xe-xem. Xe is able to use such pronouns as xyrs for xemself. Pat's pronouns are also for others to use on xem.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">Considering Chris, as for them, they have as their pronouns they-them. They are able to use such pronouns as theirs for themself. Chris's pronouns are also for others to use on them.&#x000A;Considering Pat, as for xem, xe has as xyr pronouns xe-xem. Xe is able to use such pronouns as xyrs for xemself. Pat's pronouns are also for others to use on xem.&#x000A;&#x000A;&gt;</commentary>
+  <item nodeId="node-3">
+    <command xml:space="preserve">x Smith</command>
+    <result xml:space="preserve">There are 4 pertinent pronoun lexemes.&#x000A;At least one is third person animate singular.&#x000A;At least one is third person inanimate plural.&#x000A;And ultimately the pertinent pronoun rules succeeded with the label -1.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">There are 4 pertinent pronoun lexemes.&#x000A;At least one is third person animate singular.&#x000A;At least one is third person inanimate plural.&#x000A;And ultimately the pertinent pronoun rules succeeded with the label -1.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-304"/>
+      <child nodeId="node-4"/>
     </children>
   </item>
-  <item nodeId="node-304">
-    <command xml:space="preserve">pronouns</command>
-    <result xml:space="preserve">At the moment, "them" means Chris, "her" is unset, "him" is unset, "it" is unset and "xem" means Pat.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">At the moment, "them" means Chris, "her" is unset, "him" is unset, "it" is unset and "xem" means Pat.&#x000A;&#x000A;&gt;</commentary>
+  <item nodeId="node-4">
+    <command xml:space="preserve">x Baker</command>
+    <result xml:space="preserve">There are 2 pertinent pronoun lexemes.&#x000A;At least one is third person animate singular.&#x000A;At least one is third person animate plural.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">There are 2 pertinent pronoun lexemes.&#x000A;At least one is third person animate singular.&#x000A;At least one is third person animate plural.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-305"/>
+      <child nodeId="node-5"/>
     </children>
   </item>
-  <item nodeId="node-305">
-    <command xml:space="preserve">x them</command>
-    <result xml:space="preserve">You see nothing special about Chris.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">You see nothing special about Chris.&#x000A;&#x000A;&gt;</commentary>
+  <item nodeId="node-5">
+    <command xml:space="preserve">x Tailor</command>
+    <result xml:space="preserve">There are 4 pertinent pronoun lexemes.&#x000A;At least one is third person animate singular.&#x000A;At least one is third person inanimate singular.&#x000A;And ultimately the pertinent pronoun rules succeeded with the label -1.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">There are 4 pertinent pronoun lexemes.&#x000A;At least one is third person animate singular.&#x000A;At least one is third person inanimate singular.&#x000A;And ultimately the pertinent pronoun rules succeeded with the label -1.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-306"/>
+      <child nodeId="node-6"/>
     </children>
   </item>
-  <item nodeId="node-306">
-    <command xml:space="preserve">x xem</command>
-    <result xml:space="preserve">You see nothing special about Pat.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">You see nothing special about Pat.&#x000A;&#x000A;&gt;</commentary>
+  <item nodeId="node-6">
+    <command xml:space="preserve">x Clerk</command>
+    <result xml:space="preserve">There are 2 pertinent pronoun lexemes.&#x000A;At least one is third person animate singular.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">There are 2 pertinent pronoun lexemes.&#x000A;At least one is third person animate singular.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-307"/>
+      <child nodeId="node-7"/>
     </children>
   </item>
-  <item nodeId="node-307">
-    <command xml:space="preserve">x xyr cravat</command>
-    <result xml:space="preserve">You see nothing special about the purple cravat.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve">You see nothing special about the purple cravat.&#x000A;&#x000A;&gt;</commentary>
+  <item nodeId="node-7">
+    <command xml:space="preserve">x Steward</command>
+    <result xml:space="preserve">There is 1 pertinent pronoun lexeme.&#x000A;I-me appertains, so the pertinent pronoun rules failed.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">There is 1 pertinent pronoun lexeme.&#x000A;I-me appertains, so the pertinent pronoun rules failed.&#x000A;&#x000A;&gt;</commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-8"/>
+    </children>
+  </item>
+  <item nodeId="node-8">
+    <command xml:space="preserve">x Prince</command>
+    <result xml:space="preserve">There is no pertinent pronoun lexeme.&#x000A;And ultimately the pertinent pronoun rules succeeded with the label -1.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve">There is no pertinent pronoun lexeme.&#x000A;And ultimately the pertinent pronoun rules succeeded with the label -1.&#x000A;&#x000A;&gt;</commentary>
     <changed>NO</changed>
   </item>
 </Skein>

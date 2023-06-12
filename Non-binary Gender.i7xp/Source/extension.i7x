@@ -661,34 +661,22 @@ To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns accord
 To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) without backup: (- PronounPertinence({P}, 0, {R}); -).
 To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) then (B - a K based rule) for (V - a value of kind K): (- PronounPertinence({P}, 0, {R}, {B}, {V}); -).
 To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) for (V - a value of kind K) without backup: (- PronounPertinence({P}, 0, {R}, 0, {V}); -).
-To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}); -).
+To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule producing K): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}); -).
 To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule) without backup: (- PronounPertinence({P}, {-strong-kind:K}, {R}); -).
-To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a L based rule) then (B - a L based rule) for (V - a value of kind L): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}, {V}); -).
+To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a L based rule) then (B - a L based rule producing K) for (V - a value of kind L): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}, {V}); -).
 To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a L based rule) for (V - a value of kind L) without backup: (- PronounPertinence({P}, {-strong-kind:K}, {R}, 0, {V}); -).
-To decide what K is the (V - name of kind of value of kind K) produced by the rulebook: (- ResultOfRule(0, 0, 0, {-strong-kind:K}) -).
+To decide what K is the/-- (V - name of kind of value of kind K) produced by applying pertinent pronouns: (- ResultOfRule(0, 0, 0, {-strong-kind:K}) -).
 
 To (P - a pronoun lexeme) appertains/appertain: (- if (PronounAppertains({P})) rtrue; -) - in to only.
 To (P - a non-third-person pronoun lexeme) appertains/appertain: (- if (PronounAppertains(-({P}))) rtrue; -) - in to only.
 To (P - a personed pronoun lexeme) appertains/appertain: (- if (PronounAppertains({P})) rtrue; -) - in to only.
 
-A pronoun number-animacy combination is a kind of value.
-The pronoun number-animacy combinations are singular-animate, plural-animate, singular-inanimate, and plural-inanimate.
-
 To decide whether any/some pronouns already appertain: (- (pronoun_pertinence_info_active ~= 0) -).
-To decide whether any/some (C1 - a pronoun number-animacy combination) pronouns already appertain: (-
-	(0 ~= (pronoun_pertinence_info_active &  IncreasingPowersOfTwo_TB-->(7+({C1}))  ))
--).
-To decide whether any/some (C1 - a pronoun number-animacy combination) or
-                           (C2 - a pronoun number-animacy combination) pronouns already appertain: (-
-	(0 ~= (pronoun_pertinence_info_active & (IncreasingPowersOfTwo_TB-->(7+({C1}))
-	                                        |IncreasingPowersOfTwo_TB-->(7+({C2})))))
--).
-To decide whether any/some (C1 - a pronoun number-animacy combination) or
-                           (C2 - a pronoun number-animacy combination) or
-                           (C3 - a pronoun number-animacy combination) pronouns already appertain: (-
-	(0 ~= (pronoun_pertinence_info_active & (IncreasingPowersOfTwo_TB-->(7+({C1}))
-	                                        |IncreasingPowersOfTwo_TB-->(7+({C2}))
-	                                        |IncreasingPowersOfTwo_TB-->(7+({C3}))))) -).
+To decide whether any/some third-person animate singular pronouns already appertain: (- (pronoun_pertinence_info_active & 256) -).
+To decide whether any/some third-person animate plural pronouns already appertain: (- (pronoun_pertinence_info_active & 512) -).
+To decide whether any/some third-person inanimate singular pronouns already appertain: (- (pronoun_pertinence_info_active & 1024) -).
+To decide whether any/some third-person inanimate plural pronouns already appertain: (- (pronoun_pertinence_info_active & 2048) -).
+
 To decide whether (P - a non-third-person pronoun lexeme) already appertains: (-
 	(0 ~= (pronoun_pertinence_info_active & IncreasingPowersOfTwo_TB-->(11+({P}))))
 -).
@@ -710,7 +698,7 @@ Elaborated pertinent pronouns for an object (called O) (this is the implied obje
 
 Elaborated pertinent pronouns for an object (called O) (this is the ambiguously plural object pronouns pertain by default rule):
 	unless O is ambiguously plural, make no decision;
-	unless some plural-animate or plural-inanimate pronouns already appertain, the plural pronouns appertain.
+	unless some third-person animate plural pronouns already appertain or some third-person inanimate plural pronouns already appertain, the plural pronouns appertain.
 
 Include (-
 
@@ -1335,7 +1323,7 @@ For example, when deciding what pronoun to use when talking about an object, it 
 
 Notice that we need at lease one phrase for examining what pronouns have already been listed. This example uses the codition "whether some pronouns already appertain". We'll look at this more in later examples.
 
-Example: ** Applicability - what things pronounns can be listed for.
+Example: ** Applicability - What things pronounns can be listed for.
 
 Usually, a pronoun listing rulebook lists pronouns for an object, since objects are usually what a pronoun applies to, but sometimes a phrase needs to start with something else; we can use a rulebook based on any kind.
 
@@ -1360,6 +1348,39 @@ Usually, a pronoun listing rulebook lists pronouns for an object, since objects 
 	Test me with "n / s / n / set pronouns of me to they-them / n"
 
 Note that we can skip the backup rulebook explicitly in the event that the utility rulebook really doesn't need one.  Also note that the utility rulebook can choose to end the listing of pronouns early by having the listing rulebook succeed or fail.
+
+Example: ** Introspection - Examining what pronouns have been listed.
+
+In the examples above, we've seen that the utility rulebook can terminate the listing of pronouns by succeeding.  Like other rulebooks, it can also succeed with a result, or it can fail.  The backup rulebook can observe this, as well as some features of which pronouns were pertinent before the utility rulebook did so.
+
+	*: "Introspection"
+	
+	Include Non-binary Gender by Sadie de Might.
+	The lab is a room.
+	Smith, Baker, Tailor, Clerk, Steward, and Prince are people in the Lab.
+	Pertinent pronouns for Smith: the plural pronouns appertain; she-her appertains; they-them appertains; you-your singular appertains.
+	Pertinent pronouns for Baker: the plural animate pronouns appertain; he-him appertains; they-them appertains; you-your plural appertains.
+	Pertinent pronouns for Tailor: the neuter pronouns appertain; they-them appertains; she-her appertains; we-us appertains.
+	Pertinent pronouns for Clerk: they-them appertains; he-him appertains; we-us appertains.
+	Pertinent pronouns for Steward: I-me appertains; he-him appertains.
+	Pertinent pronouns for Prince: do nothing.
+	
+	The label rules are a personed pronoun lexeme based rulebook producing a number.
+	A label rule about he-him with person: the rule succeeds with result 7.
+	A label rule about I-me with person: the rule fails.
+	The handle pronoun label rules are an object based rulebook producing a number.
+	A handle pronoun label rule:
+		let N be the count of pronoun lexemes that already appertain;
+		say "There [regarding N][are] [unless some pronouns already appertain]no[else][N][end if] pertinent pronoun lexeme[s].[if any third-person animate singular pronouns already appertain]At least one is third person animate singular.[end if][if any third-person animate plural pronouns already appertain]At least one is third person animate plural.[end if][if any third-person inanimate singular pronouns already appertain]At least one is third person inanimate singular.[end if][if any third-person inanimate plural pronouns already appertain]At least one is third person inanimate plural.[end if][if I-me already appertains and the rule failed]I-me appertains, so the pertinent pronoun rules failed.[otherwise if I-me already appertains]I-me appertains, but the pertinent pronoun rules did not fail.[end if]";
+		unless the rule succeeded or the rule failed, the rule succeeds with result -1.
+	
+	Instead of examining someone (called E):
+		apply the label rules to pertinent pronouns according to the pertinent pronouns rules then the handle pronoun label rules for E;
+		if the rule succeeded, say "And ultimately the pertinent pronoun rules succeeded with the label [the number produced by applying pertinent pronouns].".
+	
+	Test me with "x Smith / x Baker / x Tailor / x Clerk / x Steward / x Prince".
+	
+Note that there is a condition for whether a specific non-third-person pronoun lexeme already appertains, but for third person, there are only conditions for the more general number and animacy combination that has been covered.
 
 Example: ** New Pronouns - Adding a new pronoun lexeme and using it during play.
 
