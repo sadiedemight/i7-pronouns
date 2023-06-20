@@ -657,34 +657,69 @@ Chapter - Rulebooks
 
 Section - Appertaining
 
-To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule): (- PronounPertinence({P}, 0, {R}, {B}); -).
-To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) without backup: (- PronounPertinence({P}, 0, {R}); -).
-To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) then (B - a K based rule) for (V - a value of kind K): (- PronounPertinence({P}, 0, {R}, {B}, {V}); -).
-To apply (P - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) for (V - a value of kind K) without backup: (- PronounPertinence({P}, 0, {R}, 0, {V}); -).
-To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule producing K): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}); -).
-To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a nothing based rule) without backup: (- PronounPertinence({P}, {-strong-kind:K}, {R}); -).
-To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a L based rule) then (B - a L based rule producing K) for (V - a value of kind L): (- PronounPertinence({P}, {-strong-kind:K}, {R}, {B}, {V}); -).
-To apply (P - a personed pronoun lexeme based rule producing a value of kind K) to pertinent pronouns according to (R - a L based rule) for (V - a value of kind L) without backup: (- PronounPertinence({P}, {-strong-kind:K}, {R}, 0, {V}); -).
+To apply (U - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule): (- PronounPertinence({U}, {R}, {B}); -).
+To apply (U - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule) remembering (P - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, 0, 0, {P}); -).
+To apply (U - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule) remembering (P1 - a pronoun lexeme) and (P2 - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, 0, 0, {P1}, {P2}); -).
+To decide what K is (U - a personed pronoun lexeme based rule) applied to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule producing a value of kind K): (- PronounPertinence({U}, {R}, {B}, 0, {-strong-kind:K}); -).
+To decide what K is (U - a personed pronoun lexeme based rule) applied to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule producing a value of kind K) remembering (P - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, 0, {-strong-kind:K}, {P}); -).
+To decide what K is (U - a personed pronoun lexeme based rule) applied to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule producing a value of kind K) remembering (P1 - a pronoun lexeme) and (P2 - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, 0, {-strong-kind:K}, {P1}, {P2}); -).
+To apply (U - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) without backup: (- PronounPertinence({U}, {R}); -).
+To apply (U - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) without backup remembering (P - a pronoun lexeme): (- PronounPertinence({U}, {R}, 0, 0, 0, {P}); -).
+To apply (U - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a nothing based rule) without backup remembering (P1 - a pronoun lexeme) and (P2 - a pronoun lexeme): (- PronounPertinence({U}, {R}, 0, 0, 0, {P1}, {P2}); -).
+
+To apply (U - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) then (B - a K based rule) for (V - a value of kind K): (- PronounPertinence({U}, {R}, {B}, {V}); -).
+To apply (U - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) then (B - a K based rule) for (V - a value of kind K) remembering (P - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, {V}, 0, {P}); -).
+To apply (U - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) then (B - a K based rule) for (V - a value of kind K) remembering (P1 - a pronoun lexeme) and (P2 - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, {V}, 0, {P1}, {P2}); -).
+To decide what L is (U - a personed pronoun lexeme based rule) applied to pertinent pronouns according to (R - a K based rule) then (B - a nothing based rule producing a value of kind L) for (V - a value of kind K): (- PronounPertinence({U}, {R}, {B}, {V}, {-strong-kind:K}); -).
+To decide what L is (U - a personed pronoun lexeme based rule) applied to pertinent pronouns according to (R - a K based rule) then (B - a nothing based rule producing a value of kind L) for (V - a value of kind K) remembering (P - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, {V}, {-strong-kind:K}, {P}); -).
+To decide what L is (U - a personed pronoun lexeme based rule) applied to pertinent pronouns according to (R - a K based rule) then (B - a nothing based rule producing a value of kind L) for (V - a value of kind K) remembering (P1 - a pronoun lexeme) and (P2 - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, {V}, {-strong-kind:K}, {P1}, {P2}); -).
+To apply (U - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) for (V - a value of kind K) without backup: (- PronounPertinence({U}, {R}, 0, {V}); -).
+To apply (U - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) for (V - a value of kind K) without backup remembering (P - a pronoun lexeme): (- PronounPertinence({U}, {R}, 0, {V}, 0, {P}); -).
+To apply (U - a personed pronoun lexeme based rule) to pertinent pronouns according to (R - a K based rule) for (V - a value of kind K) without backup remembering (P1 - a pronoun lexeme) and (P2 - a pronoun lexeme): (- PronounPertinence({U}, {R}, 0, {V}, 0, {P1}, {P2}); -).
+
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule): (- PronounPertinence({U}, {R}, {B}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule) remembering (P - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, 0, 0, {P}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule) remembering (P1 - a pronoun lexeme) and (P2 - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, 0, 0, {P1}, {P2}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule producing a value of kind L): (- PronounPertinence({U}, {R}, {B}, 0, {-strong-kind:L}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule producing a value of kind L) remembering (P - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, 0, {-strong-kind:L}, {P}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a nothing based rule) then (B - a nothing based rule producing a value of kind L) remembering (P1 - a pronoun lexeme) and (P2 - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, 0, {-strong-kind:L}, {P1}, {P2}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a nothing based rule) without backup: (- PronounPertinence({U}, {R}, 0, 0, {-strong-kind:K}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a nothing based rule) without backup remembering (P - a pronoun lexeme): (- PronounPertinence({U}, {R}, 0, 0, {-strong-kind:K}, {P}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a nothing based rule) without backup remembering (P1 - a pronoun lexeme) and (P2 - a pronoun lexeme): (- PronounPertinence({U}, {R}, 0, 0, {-strong-kind:K}, {P1}, {P2}); -).
+
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a L based rule) then (B - a L based rule) for (V - a value of kind L): (- PronounPertinence({U}, {R}, {B}, {V}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a L based rule) then (B - a L based rule) for (V - a value of kind L) remembering (P - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, {V}, 0, {P}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a L based rule) then (B - a L based rule) for (V - a value of kind L) remembering (P1 - a pronoun lexeme) and (P2 - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, {V}, 0, {P1}, {P2}); -).
+To decide what M is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a L based rule) then (B - a L based rule producing a value of kind M) for (V - a value of kind L): (- PronounPertinence({U}, {R}, {B}, {V}, {-strong-kind:M}); -).
+To decide what M is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a L based rule) then (B - a L based rule producing a value of kind M) for (V - a value of kind L) remembering (P - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, {V}, {-strong-kind:M}, {P}); -).
+To decide what M is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a L based rule) then (B - a L based rule producing a value of kind M) for (V - a value of kind L) remembering (P1 - a pronoun lexeme) and (P2 - a pronoun lexeme): (- PronounPertinence({U}, {R}, {B}, {V}, {-strong-kind:M}, {P1}, {P2}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a L based rule) for (V - a value of kind L) without backup: (- PronounPertinence({U}, {R}, 0, {V}, {-strong-kind:K}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a L based rule) for (V - a value of kind L) without backup remembering (P - a pronoun lexeme): (- PronounPertinence({U}, {R}, 0, {V}, {-strong-kind:K}, {P}); -).
+To decide what K is (U - a personed pronoun lexeme based rule producing a value of kind K) applied to pertinent pronouns according to (R - a L based rule) for (V - a value of kind L) without backup remembering (P1 - a pronoun lexeme) and (P2 - a pronoun lexeme): (- PronounPertinence({U}, {R}, 0, {V}, {-strong-kind:K}, {P1}, {P2}); -).
+
 To decide what K is the/-- (V - name of kind of value of kind K) produced by applying pertinent pronouns: (- ResultOfRule(0, 0, 0, {-strong-kind:K}) -).
+
+To decide whether any/some pronouns already appertain: (- (pronoun_pertinence_info ~= 0) -).
+To decide whether any/some third-person animate singular pronouns already appertain: (- (pronoun_pertinence_info & 256) -).
+To decide whether any/some third-person animate plural pronouns already appertain: (- (pronoun_pertinence_info & 512) -).
+To decide whether any/some third-person inanimate singular pronouns already appertain: (- (pronoun_pertinence_info & 1024) -).
+To decide whether any/some third-person inanimate plural pronouns already appertain: (- (pronoun_pertinence_info & 2048) -).
+
+To decide whether (P - a non-third-person pronoun lexeme) already appertains: (-
+	(0 ~= (pronoun_pertinence_info & IncreasingPowersOfTwo_TB-->(11+({P}))))
+-).
+To decide which number is the count of pronoun lexemes that already appertain: (- (pronoun_pertinence_info & 255) -).
+
+To decide whether (P - a pronoun lexeme) is/are remembered to already appertain: (- PronounRemembered({P}) -).
 
 To (P - a pronoun lexeme) appertains/appertain: (- if (PronounAppertains({P})) rtrue; -) - in to only.
 To (P - a non-third-person pronoun lexeme) appertains/appertain: (- if (PronounAppertains(-({P}))) rtrue; -) - in to only.
 To (P - a personed pronoun lexeme) appertains/appertain: (- if (PronounAppertains({P})) rtrue; -) - in to only.
 
-To decide whether any/some pronouns already appertain: (- (pronoun_pertinence_info_active ~= 0) -).
-To decide whether any/some third-person animate singular pronouns already appertain: (- (pronoun_pertinence_info_active & 256) -).
-To decide whether any/some third-person animate plural pronouns already appertain: (- (pronoun_pertinence_info_active & 512) -).
-To decide whether any/some third-person inanimate singular pronouns already appertain: (- (pronoun_pertinence_info_active & 1024) -).
-To decide whether any/some third-person inanimate plural pronouns already appertain: (- (pronoun_pertinence_info_active & 2048) -).
-
-To decide whether (P - a non-third-person pronoun lexeme) already appertains: (-
-	(0 ~= (pronoun_pertinence_info_active & IncreasingPowersOfTwo_TB-->(11+({P}))))
--).
-To decide which number is the count of pronoun lexemes that already appertain: (- (pronoun_pertinence_info_active & 255) -).
-
 The implied object pronouns appertain if nothing else rules are an object based rulebook.
 Implied object pronouns appertain if nothing else rule for an object (called O):
-	unless some pronouns already appertain, the implied pronouns of O appertain.
+	unless some pronouns already appertain, the implied pronouns of O appertain;
+	if the rule succeeded or the rule failed, decide yes.
 	
 The pertinent pronouns rules are a object based rulebook.
 
@@ -702,36 +737,80 @@ Elaborated pertinent pronouns for an object (called O) (this is the ambiguously 
 
 Include (-
 
+! The "rule" parameter passed to the deepest-nested call to PronounPertinence.  Followed when PronounAppertains is calle.
 Global pronoun_pertinence_rule;
-Global pronoun_pertinence_kind;
+! A summary of what calls to PronounApperatins have been made during the deepest-nested call to PronounPertinence.
+! This stores exactly which non-third-person pronoun lexemes have been given and a summary of the third-person ones:
+!   Bits 0-7: Count of third-person pronoun lexemes.
+!   Bits 8-11: Which GNAs have been covered by third-person pronoun lexemes.
+!   Bits 12-15: The non-third-person pronouns. 
 Global pronoun_pertinence_info;
-Global pronoun_pertinence_info_active;
+! The third-person pronoun lexemes to remember when passed to PronounApperatins during the deepest-nested call to PronounPertinence.
+! This storts both the "rem1" and "rem2", as well as bits for whether each of those lexemes has been given.
+!   Bits 0-6: "rem1".
+!   Bit 7: Whether "rem1" was passed.
+!   Bits 8-14: "rem2".
+!   Bit 15: Whether "rem2" was passed.
+Global pronoun_pertinence_remembered;
 
 [ PronounAppertains p  decided;
 	if (FollowRulebook(pronoun_pertinence_rule, p, true)) decided = true;
+	if (p == (pronoun_pertinence_remembered & $7F)) {
+	  pronoun_pertinence_remembered = pronoun_pertinence_remembered | $0080;
+	}
+	if (p == ((pronoun_pertinence_remembered/256) & $7F)) {
+	  pronoun_pertinence_remembered = pronoun_pertinence_remembered | $8000;
+	}
 	if (p < 0) {
 		p = 11 - p;
 	} else {
 		p = 8 + PronounGNA(p)/3;
 	}
-	pronoun_pertinence_info_active = 1 + (pronoun_pertinence_info_active | IncreasingPowersOfTwo_TB-->p);
+	pronoun_pertinence_info = 1 + (pronoun_pertinence_info | IncreasingPowersOfTwo_TB-->p);
 	return decided;
 ];
 
-[ PronounPertinence rule kind rulebook backup parameter  old_rule old_kind old_info;
-	old_rule = pronoun_pertinence_rule;
-	old_kind = pronoun_pertinence_kind;
-	! Note that the kind of "parameter" is not stored; it is assume that the rules within rulebook know that.
-	old_info = pronoun_pertinence_info_active;
+[ PronounRemembered p;
+	p = p | $0080;
+	if ((pronoun_pertinence_remembered & $FF) == p) rtrue;
+	if (((pronoun_pertinence_remembered/256) & $FF) == p) rtrue;
+	rfalse;
+];
+
+! This routine implements all the variants of the "apply... to pertinent pronouns acconding to..." phrase.
+! Parameters:
+!   "rule": called the utility rule in documentation examples; the rule or rulebook that is applied each time PronouAppertains is called.
+!   "listing": called the listing rule in documentation examples; the rule or rulebook that repeatedly calls PronouAppertains without any particular knowledge of "rule".
+!   "backup": call the backup rule in documentation examples; the rule or rulebook that decides whether PronounAppertains has been called enough and maybe succeeds or fails when "rule" has done neither.  This can also be zero to use the result of "rule" unchanged.
+!   "parameter": The value to which the "listing" and "backup" rules are applied.
+!   "kind": the strong kind produced by this routine, or zero for an implicit non-block kind.
+!      If "backed" is non-zero, this is for the type it produces; if zero, this is for the kind produced by "rule".
+!   "rem1": The first pronoun lexeme that is remembered to be pertinent, or zero.
+!   "rem2": The first pronoun lexeme that is remembered to be pertinent, or zero.
+[ PronounPertinence rule listing backup parameter kind rem1 rem2;
+	! Start recording the current values of the globals that are being updated by PronounAppertains, so a new set of values can be used just for the duration of this routine.
+	! Note that the kinds of "rule" and "parameter" are not stored; it is assume that the rules within "rule", "listing", and "backup" know that.
+	! Pack "rem1" and "rem2" together for storage in "pronoun_pertinence_remembered"
+	rem1 = rem1 | (rem2*256);
+	rem2 = pronoun_pertinence_rule;
 	pronoun_pertinence_rule = rule;
-	pronoun_pertinence_kind = kind;
-	pronoun_pertinence_info_active = 0;
-	FollowRulebook(rulebook, parameter, true);
-	if (backup) FollowRulebook(backup, parameter, true);
-	pronoun_pertinence_info = pronoun_pertinence_info_active;
-	pronoun_pertinence_rule = old_rule;
-	pronoun_pertinence_kind = old_kind;
-	pronoun_pertinence_info_active = old_info;
+	rule = rem2;  ! Now this is the old "pronoun_pertinence_rule".
+	rem2 = pronoun_pertinence_remembered;
+	pronoun_pertinence_remembered = rem1;
+	rem1 = rem2;  ! Now this is the old "pronoun_pertinence_remembered".
+	rem2 = pronoun_pertinence_info;  ! Now this is the old "pronoun_pertinence_info".
+	pronoun_pertinence_info = 0;
+	
+	if (backup) {
+		FollowRulebook(listing, parameter, true);
+		kind = ResultOfRule(backup, parameter, true, kind);
+	} else {
+		kind = ResultOfRule(listing, parameter, true, kind);
+	}
+	pronoun_pertinence_rule = rule;
+	pronoun_pertinence_info = rem2;
+	pronoun_pertinence_remembered = rem1;
+	return kind;
 ];
 
 -).
@@ -750,8 +829,7 @@ To decide which pronoun lexeme is the/-- pronouns of (O - an object): (- Pronoun
 Include (-
 
 [ PronounOfObject obj;
-	PronounPertinence((+ the produce pronouns rule +), 0, (+ pronouns pertinent to referents +), (+ the implied object pronouns appertain if nothing else rules +), obj);
-	return latest_rule_result-->2;
+	return PronounPertinence((+ the produce pronouns rule +), (+ pronouns pertinent to referents +), (+ the implied object pronouns appertain if nothing else rules +), obj);
 ];
 
 -).
@@ -944,7 +1022,7 @@ Include (-
 ! Animacy is 0 or 1, for animate or inanimate respectively; this matches the "animate" property, inverted, which is set true for all kinds of person.
 ! These are encoded together in radix notation, "gender" in the ones place, number in the threes place, and animacy in the sixes place.
 !
-! The result of this function is used:
+! The result of this routine is used:
 !   To index into LanguageGNAsToArticles to select what article to print for an object.
 !    In English, this uses number to select between "a" and "some" for indefinite articles.
 !	  This assumes that (the GNA/3)%2 is the grammatical number.
@@ -1006,7 +1084,7 @@ Global pronoun_pertinence_parameter;
 	if (obj == player) return;
 	old_parameter = pronoun_pertinence_parameter;
 	pronoun_pertinence_parameter = obj;
-	PronounPertinence(PRONOUN_REFERS_TO_OBJECT_R, 0, (+ pronouns pertinent to referents +), (+ the implied object pronouns appertain if nothing else rules +), obj);
+	PronounPertinence(PRONOUN_REFERS_TO_OBJECT_R, (+ pronouns pertinent to referents +), (+ the implied object pronouns appertain if nothing else rules +), obj);
 	pronoun_pertinence_parameter = old_parameter;
 	! Original: obj  x bm g;
 	! if (obj == player) return;
@@ -1351,7 +1429,13 @@ Note that we can skip the backup rulebook explicitly in the event that the utili
 
 Example: ** Introspection - Examining what pronouns have been listed.
 
-In the examples above, we've seen that the utility rulebook can terminate the listing of pronouns by succeeding.  Like other rulebooks, it can also succeed with a result, or it can fail.  The backup rulebook can observe this, as well as some features of which pronouns were pertinent before the utility rulebook did so.
+In the examples above, we've seen that the utility rulebook can terminate the listing of pronouns by succeeding.  Like other rulebooks, it can also succeed with a result, or it can fail.  The backup rulebook can observe this, as well as some information about which pronouns were pertinent.
+
+There are only a few non-third-person pronoun lexemes, and whether each of these pertains can be checked individually.  For third-person lexemes, there are too many to track all of, but up to two may be called out as specifically tracked, and their total count and what number and animacy they cover can be observed.
+
+Moreover, this information is available even to the utility rule; the observed lexeme to not include the one currently being passed to the rule.
+
+Note that backup rulebook is separate from the utility rulebook; each one succeeds or fails separately.
 
 	*: "Introspection"
 	
@@ -1360,7 +1444,7 @@ In the examples above, we've seen that the utility rulebook can terminate the li
 	Smith, Baker, Tailor, Clerk, Steward, and Prince are people in the Lab.
 	Pertinent pronouns for Smith: the plural pronouns appertain; she-her appertains; they-them appertains; you-your singular appertains.
 	Pertinent pronouns for Baker: the plural animate pronouns appertain; he-him appertains; they-them appertains; you-your plural appertains.
-	Pertinent pronouns for Tailor: the neuter pronouns appertain; they-them appertains; she-her appertains; we-us appertains.
+	Pertinent pronouns for Tailor: the neuter pronouns appertain; they-them appertains; she-her appertains.
 	Pertinent pronouns for Clerk: they-them appertains; he-him appertains; we-us appertains.
 	Pertinent pronouns for Steward: I-me appertains; he-him appertains.
 	Pertinent pronouns for Prince: do nothing.
@@ -1368,19 +1452,39 @@ In the examples above, we've seen that the utility rulebook can terminate the li
 	The label rules are a personed pronoun lexeme based rulebook producing a number.
 	A label rule about he-him with person: the rule succeeds with result 7.
 	A label rule about I-me with person: the rule fails.
+	A label rule: if the count of pronoun lexemes that already appertain is at least three, the rule succeeds with result 4.
+
 	The handle pronoun label rules are an object based rulebook producing a number.
 	A handle pronoun label rule:
 		let N be the count of pronoun lexemes that already appertain;
-		say "There [regarding N][are] [unless some pronouns already appertain]no[else][N][end if] pertinent pronoun lexeme[s].[if any third-person animate singular pronouns already appertain]At least one is third person animate singular.[end if][if any third-person animate plural pronouns already appertain]At least one is third person animate plural.[end if][if any third-person inanimate singular pronouns already appertain]At least one is third person inanimate singular.[end if][if any third-person inanimate plural pronouns already appertain]At least one is third person inanimate plural.[end if][if I-me already appertains and the rule failed]I-me appertains, so the pertinent pronoun rules failed.[otherwise if I-me already appertains]I-me appertains, but the pertinent pronoun rules did not fail.[end if]";
-		unless the rule succeeded or the rule failed, the rule succeeds with result -1.
+		say "There [regarding N][are] [unless some pronouns already appertain]no[else][N][end if] pertinent pronoun lexeme[if N is greater than one]s[end if].";
+		if any third-person animate singular pronouns already appertain, say "At least one is third person animate singular.";
+		if any third-person animate plural pronouns already appertain, say "At least one is third person animate plural.";
+		if the neuter pronouns are remembered to already appertain:
+			say "Somehow the neuter pronouns were remembered to appertain!";
+		otherwise if any third-person inanimate singular pronouns already appertain:
+			say "At least one is third person inanimate singular.";
+		if any third-person inanimate plural pronouns already appertain, say "At least one is third person inanimate plural.";
+		if she-her is remembered to already appertain, say "She-her appertains.";
+		if they-them is remembered to already appertain, say "They-them appertains.";
+		if we-us already appertains, say "We-us appertains";
+		if the rule failed:
+			if I-me already appertains, say "I-me appertains, so the pertinent pronoun rules failed.";
+			the rule fails;
+		otherwise:
+			if I-me already appertains, say "I-me appertains, but the pertinent pronoun rules did not fail!";
+			if the rule succeeded:
+				let S be the number produced by applying pertinent pronouns;
+				say "The pertinent pronoun rules succeeded with [S].";
+				the rule succeeds with result S; 
+			otherwise:
+				the rule succeeds with result -1.
 	
 	Instead of examining someone (called E):
-		apply the label rules to pertinent pronouns according to the pertinent pronouns rules then the handle pronoun label rules for E;
-		if the rule succeeded, say "And ultimately the pertinent pronoun rules succeeded with the label [the number produced by applying pertinent pronouns].".
+		let N be the label rules applied to pertinent pronouns according to the pertinent pronouns rules then the handle pronoun label rules for E remembering she-her and they-them;
+		say "And ultimately the pertinent pronoun rules [if the rule succeeded]succeeded[else if the rule failed]failed[else]neither succeeded nor failed[end if] with the label [N].".
 	
 	Test me with "x Smith / x Baker / x Tailor / x Clerk / x Steward / x Prince".
-	
-Note that there is a condition for whether a specific non-third-person pronoun lexeme already appertains, but for third person, there are only conditions for the more general number and animacy combination that has been covered.
 
 Example: ** New Pronouns - Adding a new pronoun lexeme and using it during play.
 
